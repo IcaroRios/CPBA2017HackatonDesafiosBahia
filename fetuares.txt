@@ -1,0 +1,18 @@
+fetuares
+-usuario
+formulario mais completo e flexivel
+buscar vaga de emprego que se aproxime de seu perfil, considerando alguns pontos fundamentais (sexo, idade, leis)
+candidata a entrevista
+cancelar entrevista
+cadastra sua profissão caso nao tenha na cbo
+gerenciamento de entrevistas marcadas
+acumular 3 entrevistas
+
+-empresa
+feedback ao final da entrevista
+acumular 3 candidatos
+
+-geral
+login
+
+-sinefacil
