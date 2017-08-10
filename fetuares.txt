@@ -8,9 +8,11 @@ cadastra sua profissão caso nao tenha na cbo
 gerenciamento de entrevistas marcadas
 acumular 3 entrevistas
 
+
 -empresa
 feedback ao final da entrevista
 acumular 3 candidatos
+empresas podem recomendar funcionarios *
 
 -geral
 login
