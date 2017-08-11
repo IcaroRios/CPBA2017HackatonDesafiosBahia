@@ -38,7 +38,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  azulbahia: #0064AA,
+  vermelhobahia: #E60004
 );
 
 
@@ -46,6 +48,7 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+$text-input-highlight-color-valid: #0064AA;
 
 
 

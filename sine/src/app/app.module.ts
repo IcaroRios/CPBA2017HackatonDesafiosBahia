@@ -10,6 +10,7 @@ import { HomePage } from '../pages/home/home';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
+import { CadastroCandidatoPage } from '../pages/cadastro-candidato/cadastro-candidato';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
@@ -23,7 +24,8 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    CadastroCandidatoPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    CadastroCandidatoPage
   ],
   providers: [
     StatusBar,
