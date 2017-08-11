@@ -36,5 +36,8 @@ export class FirebaseProvider {
   cadastrarCandidato(candidato) {
     return this.afdb.list('/candidatos/').push(candidato);
   }
+  cadastrarEmpresa(empresa){
+    return this.afdb.list('empresas/').push(empresa);
+  }
 
 }

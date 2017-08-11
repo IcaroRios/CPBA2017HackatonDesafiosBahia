@@ -5,18 +5,14 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CadastroCandidatoPage } from '../pages/cadastro-candidato/cadastro-candidato';
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
-
+import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
 
 import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
-  rootPage:any = HomeCandidatoPage;
-=======
-  rootPage: any = PerfilUsuarioPage;
->>>>>>> c34fe58059f5de7f738b1b6012a15f1a8b554f63
+  rootPage:any = CadastroEmpresaPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

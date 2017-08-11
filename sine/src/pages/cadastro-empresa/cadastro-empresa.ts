@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ToastController } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { Empresa } from '../../model/empresa';
+import { CripSenhaProvider } from '../../providers/crip-senha/crip-senha';
 /**
  * Generated class for the CadastroEmpresaPage page.
  *
@@ -23,6 +24,7 @@ export class CadastroEmpresaPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private fbService: FirebaseProvider,
+    private cripService: CripSenhaProvider,
     private toastCtrl: ToastController
   ) {
   }
@@ -52,9 +54,14 @@ export class CadastroEmpresaPage {
       this.mensagem("Repita a sua senha.");
     }
     if(this.senha ==this.repSenha){
-      
+      this.empresa.senha = this.cripService.encode(this.senha);
+      console.log(this.empresa);
+      this.fbService.cadastrarEmpresa(this.empresa).then(_ => {
+        this.mensagem("Cadastro feito com sucesso");
+        //this.navCtrl.pop();
+      });
     }else{
-      this.mensagem("As senhas não estão iguais.");
+      this.mensagem("As senhas estão diferentes.");
     }
   }
 
