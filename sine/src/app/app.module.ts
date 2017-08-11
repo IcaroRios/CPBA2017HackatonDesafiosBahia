@@ -17,6 +17,7 @@ import { CripSenhaProvider } from '../providers/crip-senha/crip-senha';
 import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { PerfilUsuarioPage } from './../pages/perfil-usuario/perfil-usuario';
+import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
@@ -35,7 +36,8 @@ const firebaseConfig = {
 
     CadastroEmpresaPage,
     HomeCandidatoPage,
-    PerfilUsuarioPage
+    PerfilUsuarioPage,
+    EmpresaHomePage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ const firebaseConfig = {
     CadastroCandidatoPage,
     CadastroEmpresaPage,
     HomeCandidatoPage,
-    PerfilUsuarioPage
+    PerfilUsuarioPage,
+    EmpresaHomePage
   ],
   providers: [
     StatusBar,
