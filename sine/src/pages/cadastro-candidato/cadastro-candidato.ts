@@ -57,7 +57,7 @@ export class CadastroCandidatoPage {
       console.log(this.candidato);
       this.fbService.cadastrarCandidato(this.candidato).then(_ => {
         this.mensagem("Cadastro feito com sucesso");
-        this.navCtrl.pop();
+        // this.navCtrl.pop();
       });
     }
   }
