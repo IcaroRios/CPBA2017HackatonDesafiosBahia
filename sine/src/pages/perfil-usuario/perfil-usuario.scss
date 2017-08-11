@@ -8,24 +8,23 @@ page-perfil-usuario {
         background-color: #EAFFFF !important;
     }
 
-    ion-avatar, img{
-        height: 80px !important;
-        width: 80px !important;
+    h2 {
+      color: #0064AA !important;
     }
 
-    .centralize{
-        align-self: center;
+    .centralize {
+      text-align: center;
+      align-self: center;
     }
 
-
-    .title{
-      font-size: 20px;
-      text-align: center;  
+    .title {
+      text-align: center;
     }
 
-    .card-margin{
-        margin-bottom: 15px;
+    .card-margin {
+      margin-bottom: 15px;
     }
+
 
 
 }
