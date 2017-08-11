@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Dados Cadastrais</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Nome</ion-label>
+    <ion-input type="text" [(ngModel)]="candidato.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>E-mail</ion-label>
+    <ion-input type="text" [(ngModel)]="candidato.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Senha</ion-label>
+    <ion-input type="password" [(ngModel)]="senha"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Repetir senha</ion-label>
+    <ion-input type="password" [(ngModel)]="repSenha"></ion-input>
+  </ion-item>
+
+  <ion-grid class="margintop30">
+    <ion-row>
+      <ion-col offset-6>
+        <button color="vermelhobahia" ion-button>Salvar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

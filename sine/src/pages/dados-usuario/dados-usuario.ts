@@ -1,24 +1,25 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the PerfilUsuarioPage page.
+ * Generated class for the DadosUsuarioPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
-  selector: 'page-perfil-usuario',
-  templateUrl: 'perfil-usuario.html',
+  selector: 'page-dados-usuario',
+  templateUrl: 'dados-usuario.html',
 })
-export class PerfilUsuarioPage {
+export class DadosUsuarioPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PerfilUsuarioPage');
+    console.log('ionViewDidLoad DadosUsuarioPage');
   }
 
 }

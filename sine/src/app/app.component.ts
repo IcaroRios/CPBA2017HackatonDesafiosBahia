@@ -6,6 +6,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CadastroCandidatoPage } from '../pages/cadastro-candidato/cadastro-candidato';
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
+import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
+import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
+import { LoginPage } from './../pages/login/login';
+import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
+
+
 import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'

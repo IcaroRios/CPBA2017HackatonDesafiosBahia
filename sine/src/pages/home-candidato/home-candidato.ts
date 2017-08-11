@@ -8,7 +8,6 @@ import { FirebaseProvider } from '../../providers/firebase/firebase';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-home-candidato',
   templateUrl: 'home-candidato.html',

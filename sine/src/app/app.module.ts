@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -7,8 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { Http } from '@angular/http';
-
+import {HttpModule} from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
@@ -17,6 +17,11 @@ import { CripSenhaProvider } from '../providers/crip-senha/crip-senha';
 import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { PerfilUsuarioPage } from './../pages/perfil-usuario/perfil-usuario';
+import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
+import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
+import { LoginPage } from './../pages/login/login';
+import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
@@ -32,12 +37,16 @@ const firebaseConfig = {
     MyApp,
     HomePage,
     CadastroCandidatoPage,
-
     CadastroEmpresaPage,
     HomeCandidatoPage,
-    PerfilUsuarioPage
+    PerfilUsuarioPage,
+    LoginPage,
+    EmpresaHomePage,
+    DadosUsuarioPage,
+    EmpresaVagasPage,
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
@@ -50,12 +59,16 @@ const firebaseConfig = {
     CadastroCandidatoPage,
     CadastroEmpresaPage,
     HomeCandidatoPage,
-    PerfilUsuarioPage
+    PerfilUsuarioPage,
+    LoginPage,
+    EmpresaHomePage,
+    DadosUsuarioPage,
+    EmpresaVagasPage,
+    
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    Http,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseProvider,
     CripSenhaProvider
