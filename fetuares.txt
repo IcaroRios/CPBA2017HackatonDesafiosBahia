@@ -7,7 +7,7 @@ cancelar entrevista
 cadastra sua profissão caso nao tenha na cbo
 gerenciamento de entrevistas marcadas
 acumular 3 entrevistas
-
+Adicionar Pesos nas exigencias das vagas.
 
 -empresa
 feedback ao final da entrevista
