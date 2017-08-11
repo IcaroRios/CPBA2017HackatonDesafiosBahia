@@ -4,12 +4,12 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { NativeStorage } from '@ionic-native/native-storage';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import {HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
@@ -52,7 +52,8 @@ const firebaseConfig = {
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -66,7 +67,7 @@ const firebaseConfig = {
     EmpresaHomePage,
     DadosUsuarioPage,
     EmpresaVagasPage,
-    
+
   ],
   providers: [
     StatusBar,
@@ -74,8 +75,7 @@ const firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseProvider,
     CripSenhaProvider,
-    NativeStorageProvider,
-    NativeStorage
+    NativeStorageProvider
   ]
 })
 export class AppModule { }

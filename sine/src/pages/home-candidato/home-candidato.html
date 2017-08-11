@@ -7,11 +7,11 @@
 <ion-header>
 
   <ion-navbar color="azulbahia">
-    <div (click)="abrirPage(perfilPage)">
+    <div (click)="abrirPage(perfilPage)" *ngIf="usuario">
       <ion-avatar item-start>
         <img src="imagens/boy.png">
       </ion-avatar>
-      <h4>Nome</h4>
+      <h4>{{usuario.nome}}</h4>
     </div>
     <ion-buttons end>
       <button ion-button>

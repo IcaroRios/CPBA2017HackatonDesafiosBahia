@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
-import { NativeStorage } from '@ionic-native/native-storage';
+import { Storage } from '@ionic/storage';
 
 /*
   Generated class for the NativeStorageProvider provider.
@@ -11,20 +11,20 @@ import { NativeStorage } from '@ionic-native/native-storage';
 @Injectable()
 export class NativeStorageProvider {
 
-  constructor(private nativeStorage: NativeStorage) {
+  constructor(private nativeStorage: Storage) {
     console.log('Hello NativeStorageProvider Provider');
   }
 
-  set(chave, valor) {
-    this.nativeStorage.setItem(chave, valor)
+  set(chave, valor): Promise<any> {
+    return this.nativeStorage.set(chave, valor)
       .then(
-      () => console.log('Stored item!'),
+      () => true,
       error => console.error('Error storing item', error)
       );
   }
 
-  get(chave) {
-    this.nativeStorage.getItem(chave)
+  get(chave): Promise<any> {
+    return this.nativeStorage.get(chave)
       .then(
       data => data,
       error => undefined
