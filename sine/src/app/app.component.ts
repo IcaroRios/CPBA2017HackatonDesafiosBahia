@@ -12,11 +12,7 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
   rootPage:any = HomeCandidatoPage;
-=======
-  rootPage: any = PerfilUsuarioPage;
->>>>>>> c34fe58059f5de7f738b1b6012a15f1a8b554f63
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
