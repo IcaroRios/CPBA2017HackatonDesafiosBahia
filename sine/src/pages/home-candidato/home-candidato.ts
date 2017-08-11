@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { PerfilUsuarioPage } from '../perfil-usuario/perfil-usuario';
 /**
  * Generated class for the HomeCandidatoPage page.
  *
@@ -14,11 +15,15 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class HomeCandidatoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  perfilPage = PerfilUsuarioPage;
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams
+  ) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomeCandidatoPage');
+  abrirPage(page) {
+    this.navCtrl.push(page);
   }
-
 }

@@ -4,6 +4,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -21,6 +22,7 @@ import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
 import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
 import { LoginPage } from './../pages/login/login';
 import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
+import { NativeStorageProvider } from '../providers/native-storage/native-storage';
 
 
 const firebaseConfig = {
@@ -71,7 +73,9 @@ const firebaseConfig = {
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseProvider,
-    CripSenhaProvider
+    CripSenhaProvider,
+    NativeStorageProvider,
+    NativeStorage
   ]
 })
 export class AppModule { }

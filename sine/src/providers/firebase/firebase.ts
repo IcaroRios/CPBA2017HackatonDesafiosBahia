@@ -37,7 +37,25 @@ export class FirebaseProvider {
     return this.afdb.list('/candidatos/').push(candidato);
   }
   cadastrarEmpresa(empresa){
-    return this.afdb.list('empresas/').push(empresa);
+    return this.afdb.list('/empresas/').push(empresa);
+  }
+
+  loginUsuario(email){
+    return this.afdb.list('/candidatos/', {
+      query: {
+        orderByChild: 'email',
+        equalTo: email
+      }
+    });
+  }
+
+  loginEmpresa(email){
+    return this.afdb.list('/empresas/', {
+      query: {
+        orderByChild: 'email',
+        equalTo: email
+      }
+    });
   }
 
 }

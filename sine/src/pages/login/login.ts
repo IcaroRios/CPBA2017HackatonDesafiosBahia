@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { NavController, NavParams } from 'ionic-angular';
+import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { CripSenhaProvider } from '../../providers/crip-senha/crip-senha';
 /**
  * Generated class for the LoginPage page.
  *
@@ -8,18 +9,31 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private email: string = "";
+  private senha: string = "";
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public fbService: FirebaseProvider,
+    public cripService: CripSenhaProvider
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  logar(){
+    this.fbService.loginUsuario(this.email).subscribe(res=>{
+      console.log(res);
+    });
   }
 
 }
