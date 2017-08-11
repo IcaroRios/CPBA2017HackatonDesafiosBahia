@@ -8,19 +8,23 @@ page-perfil-usuario {
         background-color: #EAFFFF !important;
     }
 
-    .centralize{
-        align-self: center;
+    h2 {
+      color: #0064AA !important;
     }
 
-
-    .title{
-      font-size: 20px;
-      text-align: center;  
+    .centralize {
+      text-align: center;
+      align-self: center;
     }
 
-    .card-margin{
-        margin-bottom: 15px;
+    .title {
+      text-align: center;
     }
+
+    .card-margin {
+      margin-bottom: 15px;
+    }
+
 
 
 }
