@@ -10,6 +10,7 @@ import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
 import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
 import { LoginPage } from './../pages/login/login';
 import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
+import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-agendamento';
 
 
 import { HomePage } from '../pages/home/home';
@@ -17,7 +18,7 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = EmpresaVagasPage;
+  rootPage:any = EmpresaAgendamentoPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
