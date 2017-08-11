@@ -1,0 +1,31 @@
+<ion-content padding>
+
+  <!-- LOGO -->
+  <div class="logo">
+    <img src="../imagens/logo.png">
+  </div>
+  <!-- LOGIN FORM -->
+  <div class="footer">
+    <ion-item class="centralize">
+      <ion-label color="azulbahia" floating>Nome</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="azulbahia" floating>E-mail</ion-label>
+      <ion-input type="text" ></ion-input>
+    </ion-item>
+    
+    <ion-grid class="margin-bottom">
+      <ion-row class="margin-top">
+        <ion-col col-5>
+          <button color="azulbahia" ion-button block (click)="cadastrar()">Login</button>
+        </ion-col>
+        <ion-col col-5 offset-2>
+          <button color="vermelhobahia" ion-button block (click)="cadastrar()">Cadastrar</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

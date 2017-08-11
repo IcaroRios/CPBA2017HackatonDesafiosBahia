@@ -8,6 +8,8 @@ import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
 import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
 import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
+import { LoginPage } from './../pages/login/login';
+
 
 import { HomePage } from '../pages/home/home';
 @Component({
@@ -15,6 +17,7 @@ import { HomePage } from '../pages/home/home';
 })
 export class MyApp {
   rootPage: any = EmpresaVagasPage;
+
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
