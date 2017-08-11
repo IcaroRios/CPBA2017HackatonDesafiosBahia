@@ -8,9 +8,9 @@
 
 
 <ion-content padding>
-
+  <hr>
   <p>Identificação do trabalhador</p>
-
+  <hr>
   <ion-item>
     <ion-label color="azulbahia" floating>Identificador(PIS/PASEP/NIS/NIT)</ion-label>
     <ion-input type="number"></ion-input>
@@ -112,7 +112,7 @@
   <hr>
 
   <p>Endereço</p>
-<hr>
+  <hr>
   <ion-item>
     <ion-label color="azulbahia" floating>CEP</ion-label>
     <ion-input type="number"></ion-input>
@@ -157,9 +157,9 @@
     <ion-label color="azulbahia" floating>Referencia</ion-label>
     <ion-input type="text"></ion-input>
   </ion-item>
-<hr>
+  <hr>
   <p>Contato</p>
-<hr>
+  <hr>
   <ion-item>
     <ion-label color="azulbahia" floating>E-mail secundário</ion-label>
     <ion-input type="text"></ion-input>
@@ -176,7 +176,7 @@
   </ion-item>
   <hr>
   <p>Documentação</p>
-<hr>
+  <hr>
   <ion-item>
     <ion-label color="azulbahia" floating>Carteira de Identidade</ion-label>
     <ion-input type="number"></ion-input>
@@ -184,7 +184,7 @@
 
   <ion-item>
     <ion-label color="azulbahia" floating>Orgão Emissor (RG)</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="text"></ion-input>
   </ion-item>
 
   <ion-item>
@@ -192,42 +192,144 @@
     <ion-input type="number"></ion-input>
   </ion-item>
 
-<ion-item>
-  <ion-label color="azulbahia" floating>Carteira de Trabalho</ion-label>
-  <ion-input type="number"></ion-input>
-</ion-item>
-<hr>
-<p>Formação Acadêmica</p>
-<hr>
+  <ion-item>
+    <ion-label color="azulbahia" floating>Carteira de Trabalho</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <hr>
+  <p>Dados Gerais</p>
+  <hr>
+  <ion-item>
+    <ion-label color="azulbahia">Papel na Família</ion-label>
+    <ion-select>
+      <ion-option value="chegfe">Chefe de família</ion-option>
+      <ion-option value="compoe">Compõe a Renda</ion-option>
+      <ion-option value="depende">Dependente</ion-option>
+    </ion-select>
+  </ion-item>
 
-<ion-item>
-  <ion-label color="azulbahia" floating>Escolaridade</ion-label>
-  <ion-input type="text"></ion-input>
-</ion-item>
+  <ion-item>
+    <ion-label color="azulbahia" floating>Renda Própria</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
 
-<ion-item>
-  <ion-label color="azulbahia">Tipo de Formação</ion-label>
-  <ion-select>
-    <ion-option value="p">Profissionalizante</ion-option>
-    <ion-option value="r">Regular</ion-option>
-    <ion-option value="s">Supletivo</ion-option>
-    <ion-option value="n">Nenhum</ion-option>
-  </ion-select>
-</ion-item>
+  <ion-item>
+    <ion-label color="azulbahia" floating>Renda Familiar</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
 
-<ion-item>
-  <ion-label color="azulbahia">Estudante</ion-label>
-  <ion-select>
-    <ion-option value="s">Sim</ion-option>
-    <ion-option value="n">Não</ion-option>
+  <ion-item>
+    <ion-label color="azulbahia" floating>Número de Membros</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
 
-  </ion-select>
-</ion-item>
+  <ion-item>
+    <ion-label color="azulbahia" floating>Número de Membros (Trabalhando)</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
 
-<ion-item>
-  <ion-label color="azulbahia" floating>Curso Tecnico</ion-label>
-  <ion-input type="number"></ion-input>
-</ion-item>
+  <ion-item>
+    <ion-label color="azulbahia">Habilitado</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Tempo de Habilitação</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Veículo para Trabalho</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Veículos disponíveis</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Disponível para viagem</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Disponível para morar no local de trabalho</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Disponível para ausentar por longo período</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Condição do Candidato</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Programa do governo que participa</ion-label>
+    <ion-select>
+      <ion-option value="s">Nenhum</ion-option>
+      <ion-option value="n">PROgER</ion-option>
+      <ion-option value="n">PRONAF</ion-option>
+      <ion-option value="n">Outros - FAT</ion-option>
+      <ion-option value="n">Outros - não FAT</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Risco de Desemprego</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Beneficiário prog. Economia Solidária</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Beneficiário prog. Bolsa Família</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Gestor de política pública</ion-label>
+    <ion-select>
+      <ion-option value="s">Nenhum</ion-option>
+      <ion-option value="n">Comissão/Conselho de Trabalho</ion-option>
+      <ion-option value="n">Fórum de políticas publicas de emprego</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+
+
 
 
 
@@ -236,8 +338,8 @@
 
   <ion-grid class="margintop30">
     <ion-row>
-      <ion-col offset-6>
-        <button color="vermelhobahia" ion-button>Salvar</button>
+      <ion-col col-4 offset-8>
+        <button color="azulbahia" ion-button block>Salvar</button>
       </ion-col>
     </ion-row>
   </ion-grid>
