@@ -11,6 +11,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
 import { CadastroCandidatoPage } from '../pages/cadastro-candidato/cadastro-candidato';
+import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
+import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
@@ -25,7 +27,9 @@ const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-    CadastroCandidatoPage
+    CadastroCandidatoPage,
+    CadastroEmpresaPage,
+    HomeCandidatoPage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,9 @@ const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    CadastroCandidatoPage
+    CadastroCandidatoPage,
+    CadastroEmpresaPage,
+    HomeCandidatoPage
   ],
   providers: [
     StatusBar,

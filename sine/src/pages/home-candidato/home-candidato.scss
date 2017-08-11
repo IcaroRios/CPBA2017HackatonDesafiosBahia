@@ -1,3 +1,38 @@
 page-home-candidato {
+    ion-avatar{
+        img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50% !important;
+        }
+        float: left;
+    }
+    ion-item{
+        background-color: transparent !important;
+        border-color: transparent !important;
+    }
+    .item-inner{
+        border-color: transparent;
+    }
+    ion-navbar{
+        h4{
+            color: white;
+        }
+    }
+    h4{
+        color:#95989A;
+    }
+    div>h4{
+        padding: 0 20px;
+    }
+    ion-content{
+        background-color: #EAFFFF !important;
+    }
+    .vagas{
+        background-color: white;
+    }
+    h2{
+        color: #0064AA;
+    }
 
 }
