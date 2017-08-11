@@ -12,7 +12,8 @@ import { LoginPage } from './../pages/login/login';
 import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
 import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-agendamento';
 import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
-
+import { CompetenciasPage } from './../pages/competencias/competencias';
+import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
 
 import { HomePage } from '../pages/home/home';
 @Component({
