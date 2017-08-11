@@ -3,6 +3,7 @@ export class Empresa {
     public CNPJ:string = "";
     public email:string = "";
     public senha: string = "";
+    private $key;
 
 
     constructor(){
