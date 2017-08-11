@@ -23,6 +23,7 @@ import { LoginPage } from './../pages/login/login';
 import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
 import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-agendamento';
 import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
+import { NovaVagaPage } from './../pages/nova-vaga/nova-vaga';
 
 
 const firebaseConfig = {
@@ -47,7 +48,8 @@ const firebaseConfig = {
     DadosUsuarioPage,
     EmpresaVagasPage,
     EmpresaAgendamentoPage,
-    EmpresaPedidosPage
+    EmpresaPedidosPage,
+    NovaVagaPage
   ],
   imports: [
     HttpModule,
@@ -69,7 +71,8 @@ const firebaseConfig = {
     DadosUsuarioPage,
     EmpresaVagasPage,
     EmpresaAgendamentoPage,
-    EmpresaPedidosPage
+    EmpresaPedidosPage,
+    NovaVagaPage
   ],
   providers: [
     StatusBar,
