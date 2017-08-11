@@ -1,24 +1,25 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the HomeCandidatoPage page.
+ * Generated class for the EmpresaHomePage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
-  selector: 'page-home-candidato',
-  templateUrl: 'home-candidato.html',
+  selector: 'page-empresa-home',
+  templateUrl: 'empresa-home.html',
 })
-export class HomeCandidatoPage {
+export class EmpresaHomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomeCandidatoPage');
+    console.log('ionViewDidLoad EmpresaHomePage');
   }
 
 }

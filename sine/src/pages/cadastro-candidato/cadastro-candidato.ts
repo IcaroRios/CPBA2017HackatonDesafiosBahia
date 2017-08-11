@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { Candidato } from '../../model/candidato';
 import { CripSenhaProvider } from '../../providers/crip-senha/crip-senha';
@@ -11,7 +11,6 @@ import { CripSenhaProvider } from '../../providers/crip-senha/crip-senha';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-cadastro-candidato',
   templateUrl: 'cadastro-candidato.html',
@@ -57,7 +56,7 @@ export class CadastroCandidatoPage {
       console.log(this.candidato);
       this.fbService.cadastrarCandidato(this.candidato).then(_ => {
         this.mensagem("Cadastro feito com sucesso");
-        this.navCtrl.pop();
+        // this.navCtrl.pop();
       });
     }
   }

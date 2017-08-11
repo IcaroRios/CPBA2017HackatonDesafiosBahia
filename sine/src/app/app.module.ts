@@ -8,8 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { Http } from '@angular/http';
-
+import {HttpModule} from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
@@ -18,6 +17,7 @@ import { CripSenhaProvider } from '../providers/crip-senha/crip-senha';
 import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { PerfilUsuarioPage } from './../pages/perfil-usuario/perfil-usuario';
+import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
 
 
 const firebaseConfig = {
@@ -37,9 +37,11 @@ const firebaseConfig = {
     CadastroEmpresaPage,
     HomeCandidatoPage,
     PerfilUsuarioPage,
-    LoginPage
+    LoginPage,
+    EmpresaHomePage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
@@ -53,12 +55,12 @@ const firebaseConfig = {
     CadastroEmpresaPage,
     HomeCandidatoPage,
     PerfilUsuarioPage,
-    LoginPage
+    LoginPage,
+    EmpresaHomePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    Http,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseProvider,
     CripSenhaProvider
