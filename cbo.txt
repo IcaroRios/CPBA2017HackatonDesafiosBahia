@@ -1,0 +1,3 @@
+http://apps.diogomachado.com/api-profissoes/
+
+https://receitaws.com.br/api

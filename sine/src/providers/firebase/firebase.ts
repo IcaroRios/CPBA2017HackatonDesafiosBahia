@@ -16,21 +16,25 @@ export class FirebaseProvider {
     console.log('Hello FirebaseProvider Provider');
   }
 
-    getVagas() {
-    return this.afdb.list('/vagas/');
-  }
+  //   getVagas() {
+  //   return this.afdb.list('/vagas/');
+  // }
 
-  getEqualsOS(valor: string) {
-     return this.afdb.list('/vagas/', {
-      query: {
-        orderByChild: 'status',
-        equalTo: valor
-      }
-    });
-  }
+  // getEqualsOS(valor: string) {
+  //    return this.afdb.list('/vagas/', {
+  //     query: {
+  //       orderByChild: 'status',
+  //       equalTo: valor
+  //     }
+  //   });
+  // }
 
-  checkIn(key, valor){
-    return this.afdb.list('/vagas/').update(key, { valor: valor })
+  // checkIn(key, valor){
+  //   return this.afdb.list('/vagas/').update(key, { valor: valor })
+  // }
+
+  cadastrarCandidato(candidato) {
+    return this.afdb.list('/candidatos/').push(candidato);
   }
 
 }
