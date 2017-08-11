@@ -20,6 +20,7 @@ import { PerfilUsuarioPage } from './../pages/perfil-usuario/perfil-usuario';
 import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
 import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
 import { LoginPage } from './../pages/login/login';
+import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
 
 
 const firebaseConfig = {
@@ -41,7 +42,8 @@ const firebaseConfig = {
     PerfilUsuarioPage,
     LoginPage,
     EmpresaHomePage,
-    DadosUsuarioPage
+    DadosUsuarioPage,
+    EmpresaVagasPage,
   ],
   imports: [
     HttpModule,
@@ -60,7 +62,9 @@ const firebaseConfig = {
     PerfilUsuarioPage,
     LoginPage,
     EmpresaHomePage,
-    DadosUsuarioPage
+    DadosUsuarioPage,
+    EmpresaVagasPage,
+    
   ],
   providers: [
     StatusBar,
