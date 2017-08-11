@@ -7,10 +7,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { Http } from '@angular/http';
+
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
 import { CadastroCandidatoPage } from '../pages/cadastro-candidato/cadastro-candidato';
+import { CripSenhaProvider } from '../providers/crip-senha/crip-senha';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
@@ -42,8 +45,10 @@ const firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
+    Http,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    FirebaseProvider
+    FirebaseProvider,
+    CripSenhaProvider
   ]
 })
 export class AppModule { }
