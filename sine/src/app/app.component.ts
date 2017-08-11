@@ -12,7 +12,12 @@ import { LoginPage } from './../pages/login/login';
 import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
 import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-agendamento';
 import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
+<<<<<<< HEAD
 import { NativeStorageProvider } from './../providers/native-storage/native-storage';
+=======
+import { CompetenciasPage } from './../pages/competencias/competencias';
+import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
+>>>>>>> 9f92d3dcb46b15269afa94464be5a6a0dedc7217
 
 import { HomePage } from '../pages/home/home';
 @Component({
@@ -21,7 +26,6 @@ import { HomePage } from '../pages/home/home';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage;
-
 
   constructor(
     platform: Platform,
