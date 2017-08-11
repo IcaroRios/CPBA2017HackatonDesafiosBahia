@@ -13,6 +13,8 @@ import { FirebaseProvider } from '../providers/firebase/firebase';
 import { CadastroCandidatoPage } from '../pages/cadastro-candidato/cadastro-candidato';
 import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
+import { PerfilUsuarioPage } from './../pages/perfil-usuario/perfil-usuario';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
@@ -28,8 +30,10 @@ const firebaseConfig = {
     MyApp,
     HomePage,
     CadastroCandidatoPage,
+
     CadastroEmpresaPage,
-    HomeCandidatoPage
+    HomeCandidatoPage,
+    PerfilUsuarioPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,8 @@ const firebaseConfig = {
     HomePage,
     CadastroCandidatoPage,
     CadastroEmpresaPage,
-    HomeCandidatoPage
+    HomeCandidatoPage,
+    PerfilUsuarioPage
   ],
   providers: [
     StatusBar,

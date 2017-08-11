@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { Candidato } from '../../model/candidato';
 /**
  * Generated class for the CadastroCandidatoPage page.
  *
@@ -14,8 +15,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'cadastro-candidato.html',
 })
 export class CadastroCandidatoPage {
+  private candidato: Candidato = new Candidato();
+  private senha:string = "";
+  private repSenha:string = "";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private fbService: FirebaseProvider
+  ) {
   }
 
   ionViewDidLoad() {
@@ -23,3 +31,7 @@ export class CadastroCandidatoPage {
   }
 
 }
+// .then(_ => {
+//         this.showMessage("Ordem de serviço editada com sucesso");
+//         this.navCtrl.pop();
+//       });

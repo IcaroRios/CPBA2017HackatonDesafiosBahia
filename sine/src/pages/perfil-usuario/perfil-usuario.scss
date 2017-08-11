@@ -1,0 +1,31 @@
+page-perfil-usuario {
+
+    ion-title {
+        text-align: center !important;
+    }
+
+    ion-content {
+        background-color: #EAFFFF !important;
+    }
+
+    ion-avatar, img{
+        height: 80px !important;
+        width: 80px !important;
+    }
+
+    .centralize{
+        align-self: center;
+    }
+
+
+    .title{
+      font-size: 20px;
+      text-align: center;  
+    }
+
+    .card-margin{
+        margin-bottom: 15px;
+    }
+
+
+}
