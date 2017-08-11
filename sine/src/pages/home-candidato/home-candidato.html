@@ -42,7 +42,7 @@
         <ion-col col-4>
         <img src="imagens/calendar.png">
         </ion-col>
-        <ion-col col-8 class="centralize">
+        <ion-col (click)="redirecionarAgendamentos()" col-8 class="centralize">
           <h2 class="centralize">Agendamentos</h2>
         </ion-col>
       </ion-row>
@@ -56,7 +56,7 @@
     <ion-item>
       <h2>Analista de sistemas (2 vagas)</h2>
       <h4>Binarii</h4>
-      <h4>11/08/2017</h4>
+      <h4>11/08/2017</h4>      
     </ion-item>
   </div>
 </ion-content>

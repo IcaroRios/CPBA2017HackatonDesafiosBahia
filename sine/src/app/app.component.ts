@@ -6,13 +6,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CadastroCandidatoPage } from '../pages/cadastro-candidato/cadastro-candidato';
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
-
 import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = CadastroEmpresaPage;
+  rootPage:any = PerfilUsuarioPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
