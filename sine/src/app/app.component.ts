@@ -19,7 +19,11 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage:any = DadosUsuarioPage;
+=======
+  rootPage: any = LoginPage;
+>>>>>>> 0f731ad6325bc493582b2b69de350e4b809410ec
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -7,15 +7,17 @@
 <ion-header>
 
   <ion-navbar color="azulbahia">
+    <div (click)="abrirPage(perfilPage)" *ngIf="usuario">
       <ion-avatar item-start>
         <img src="imagens/boy.png">
       </ion-avatar>
-      <h4>Nome</h4>
-      <ion-buttons end>
-        <button ion-button>
+      <h4>{{usuario.nome}}</h4>
+    </div>
+    <ion-buttons end>
+      <button ion-button>
           Sair &nbsp;<ion-icon name="arrow-dropright"></ion-icon>
         </button>
-      </ion-buttons>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -27,7 +29,7 @@
     <ion-grid>
       <ion-row>
         <ion-col col-4>
-        <img src="imagens/research.png">
+          <img src="imagens/research.png">
         </ion-col>
         <ion-col col-8 class="centralize">
           <h2 class="centralize">Procurar Vagas</h2>
@@ -40,7 +42,7 @@
     <ion-grid>
       <ion-row>
         <ion-col col-4>
-        <img src="imagens/calendar.png">
+          <img src="imagens/calendar.png">
         </ion-col>
         <ion-col (click)="redirecionarAgendamentos()" col-8 class="centralize">
           <h2 class="centralize">Agendamentos</h2>
