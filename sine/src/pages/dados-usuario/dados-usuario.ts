@@ -38,28 +38,7 @@ export class DadosUsuarioPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad DadosUsuarioPage');
   }
-  salvarInformacoes() {
-    if (!this.candidato.numeroIdentificacao) {
-      this.mensagem("Informe sua indentificação")
-    }
-    if (!this.candidato.nomeMae) {
-      this.mensagem("Informe o nome de sua mãe")
-    } if (!this.candidato.sexo) {
-      this.mensagem("Informe seu sexo")
-    } if (!this.candidato.raca) {
-      this.mensagem("Informe sua raça")
-    } if (!this.candidato.dataNascimento) {
-      this.mensagem("informe sua data de nascimento")
-    } if (!this.candidato.estadoCivil) {
-      this.mensagem("informe seu estado civil")
-    }if(!this.candidato.nacionalidade){
-      this.mensagem("informe sua nacionalidade")
-    }if(!this.candidato.naturalidade){
-      this.mensagem("informe sua naturalidade")
-    }if(!this.candidato.uf){
-      this.mensagem("informe seu UF")
-    }
-    
+  salvarInformacoes() {   
 
   }
 }
