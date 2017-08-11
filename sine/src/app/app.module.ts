@@ -1,4 +1,4 @@
-import { LoginPage } from './../pages/login/login';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -18,6 +18,8 @@ import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa'
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { PerfilUsuarioPage } from './../pages/perfil-usuario/perfil-usuario';
 import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
+import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
+import { LoginPage } from './../pages/login/login';
 
 
 const firebaseConfig = {
@@ -38,7 +40,8 @@ const firebaseConfig = {
     HomeCandidatoPage,
     PerfilUsuarioPage,
     LoginPage,
-    EmpresaHomePage
+    EmpresaHomePage,
+    DadosUsuarioPage
   ],
   imports: [
     HttpModule,
@@ -56,7 +59,8 @@ const firebaseConfig = {
     HomeCandidatoPage,
     PerfilUsuarioPage,
     LoginPage,
-    EmpresaHomePage
+    EmpresaHomePage,
+    DadosUsuarioPage
   ],
   providers: [
     StatusBar,

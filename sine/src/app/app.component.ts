@@ -7,6 +7,7 @@ import { CadastroCandidatoPage } from '../pages/cadastro-candidato/cadastro-cand
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
 import { LoginPage } from './../pages/login/login';
+import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
 
 import { HomePage } from '../pages/home/home';
 @Component({
