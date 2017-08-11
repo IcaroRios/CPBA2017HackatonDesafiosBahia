@@ -19,12 +19,7 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
   rootPage: any = LoginPage;
-
-=======
-  rootPage:any = EmpresaPedidosPage;
->>>>>>> 452b00efb8dae6272929dcf754c1702ad4c16992
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
