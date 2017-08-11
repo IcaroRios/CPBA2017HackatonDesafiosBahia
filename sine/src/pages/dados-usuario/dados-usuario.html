@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="azulbahia">
     <ion-title>Dados Cadastrais</ion-title>
   </ion-navbar>
 
@@ -8,31 +8,338 @@
 
 
 <ion-content padding>
+  <hr>
+  <p>Identificação do trabalhador</p>
+  <hr>
+  <ion-item>
+    <ion-label color="azulbahia" floating>Identificador(PIS/PASEP/NIS/NIT)</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Nome</ion-label>
-    <ion-input type="text" [(ngModel)]="candidato.nome"></ion-input>
+    <ion-input type="text"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>E-mail</ion-label>
-    <ion-input type="text" [(ngModel)]="candidato.email"></ion-input>
+    <ion-input type="text"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label color="azulbahia" floating>Senha</ion-label>
-    <ion-input type="password" [(ngModel)]="senha"></ion-input>
+    <ion-label color="azulbahia" floating>Data Nascimento</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
   </ion-item>
 
   <ion-item>
-    <ion-label color="azulbahia" floating>Repetir senha</ion-label>
-    <ion-input type="password" [(ngModel)]="repSenha"></ion-input>
+    <ion-label color="azulbahia">Gênero</ion-label>
+    <ion-select>
+      <ion-option value="m">Masculino</ion-option>
+      <ion-option value="f">Feminio</ion-option>
+    </ion-select>
   </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Raça/cor</ion-label>
+    <ion-select>
+      <ion-option value="b">Branca</ion-option>
+      <ion-option value="a">Amarela</ion-option>
+      <ion-option value="n">Negra</ion-option>
+      <ion-option value="p">Parda</ion-option>
+      <ion-option value="i">Indígena</ion-option>
+      <ion-option value="n">Não declarar</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Estado Civil</ion-label>
+    <ion-select>
+      <ion-option value="s">Solteiro</ion-option>
+      <ion-option value="c">Casado</ion-option>
+      <ion-option value="d">Divorciado</ion-option>
+      <ion-option value="s">Separado</ion-option>
+      <ion-option value="u">União Estável</ion-option>
+      <ion-option value="n">Não declarar</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Nacionalidade</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Naturalidade</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Naturalizado</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Estado</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Portador de deficiência</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+  <!-- só exibir se houver deficiencia utilizar "if" -->
+  <ion-item>
+    <ion-label color="azulbahia">Deficiência</ion-label>
+    <ion-select>
+      <ion-option value="f">Física</ion-option>
+      <ion-option value="v">Visual</ion-option>
+      <ion-option value="a">Auditiva</ion-option>
+      <ion-option value="m">Mental/Intelectual</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Descrever deficiência</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <!-- fim "if" -->
+  <hr>
+
+  <p>Endereço</p>
+  <hr>
+  <ion-item>
+    <ion-label color="azulbahia" floating>CEP</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Complemento</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Bairro</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Número</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Município</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Estado</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Zona de Moradia</ion-label>
+    <ion-select>
+      <ion-option value="f">Urbana</ion-option>
+      <ion-option value="v">Rural</ion-option>
+      <ion-option value="a">Quilombola</ion-option>
+      <ion-option value="m">Comunidade</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Referencia</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+  <hr>
+  <p>Contato</p>
+  <hr>
+  <ion-item>
+    <ion-label color="azulbahia" floating>E-mail secundário</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Telefone</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Telefone secundário</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <hr>
+  <p>Documentação</p>
+  <hr>
+  <ion-item>
+    <ion-label color="azulbahia" floating>Carteira de Identidade</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Orgão Emissor (RG)</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>CPF</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Carteira de Trabalho</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <hr>
+  <p>Dados Gerais</p>
+  <hr>
+  <ion-item>
+    <ion-label color="azulbahia">Papel na Família</ion-label>
+    <ion-select>
+      <ion-option value="chegfe">Chefe de família</ion-option>
+      <ion-option value="compoe">Compõe a Renda</ion-option>
+      <ion-option value="depende">Dependente</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Renda Própria</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Renda Familiar</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Número de Membros</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Número de Membros (Trabalhando)</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Habilitado</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Tempo de Habilitação</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Veículo para Trabalho</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Veículos disponíveis</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Disponível para viagem</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Disponível para morar no local de trabalho</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Disponível para ausentar por longo período</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia" floating>Condição do Candidato</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Programa do governo que participa</ion-label>
+    <ion-select>
+      <ion-option value="s">Nenhum</ion-option>
+      <ion-option value="n">PROgER</ion-option>
+      <ion-option value="n">PRONAF</ion-option>
+      <ion-option value="n">Outros - FAT</ion-option>
+      <ion-option value="n">Outros - não FAT</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Risco de Desemprego</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Beneficiário prog. Economia Solidária</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Beneficiário prog. Bolsa Família</ion-label>
+    <ion-select>
+      <ion-option value="s">Sim</ion-option>
+      <ion-option value="n">Não</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="azulbahia">Gestor de política pública</ion-label>
+    <ion-select>
+      <ion-option value="s">Nenhum</ion-option>
+      <ion-option value="n">Comissão/Conselho de Trabalho</ion-option>
+      <ion-option value="n">Fórum de políticas publicas de emprego</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+
+
+
+
+
+
+
 
   <ion-grid class="margintop30">
     <ion-row>
-      <ion-col offset-6>
-        <button color="vermelhobahia" ion-button>Salvar</button>
+      <ion-col col-4 offset-8>
+        <button color="azulbahia" ion-button block>Salvar</button>
       </ion-col>
     </ion-row>
   </ion-grid>

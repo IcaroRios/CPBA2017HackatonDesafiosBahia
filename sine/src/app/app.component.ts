@@ -10,6 +10,8 @@ import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
 import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
 import { LoginPage } from './../pages/login/login';
 import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
+import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-agendamento';
+import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
 
 
 import { HomePage } from '../pages/home/home';
