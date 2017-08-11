@@ -17,33 +17,33 @@
 
     <ion-item>
       <ion-label color="azulbahia" floating>Nome</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="empresa.Nome"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="azulbahia" floating>CNPJ</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text"[(ngModel)]="empresa.CNPJ"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="azulbahia" floating>E-mail</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="empresa.email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="azulbahia" floating>Senha</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="senha"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="azulbahia" floating>Repetir senha</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="repSenha"></ion-input>
     </ion-item>
 
     <ion-grid class="margintop30">
     <ion-row>
         <ion-col offset-6>
-          <button color="vermelhobahia" ion-button>Cadastrar</button>
+          <button color="vermelhobahia" ion-button (click)="cadastrar()">Cadastrar</button>
         </ion-col>
     </ion-row>
     </ion-grid>
