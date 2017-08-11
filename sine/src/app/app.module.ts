@@ -18,6 +18,7 @@ import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa'
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { PerfilUsuarioPage } from './../pages/perfil-usuario/perfil-usuario';
 import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
+import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
@@ -37,7 +38,8 @@ const firebaseConfig = {
     CadastroEmpresaPage,
     HomeCandidatoPage,
     PerfilUsuarioPage,
-    EmpresaHomePage
+    EmpresaHomePage,
+    EmpresaVagasPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ const firebaseConfig = {
     CadastroEmpresaPage,
     HomeCandidatoPage,
     PerfilUsuarioPage,
-    EmpresaHomePage
+    EmpresaHomePage,
+    EmpresaVagasPage
   ],
   providers: [
     StatusBar,
