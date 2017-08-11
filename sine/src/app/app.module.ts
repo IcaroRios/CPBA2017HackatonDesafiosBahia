@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -18,6 +19,7 @@ import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa'
 import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
 import { PerfilUsuarioPage } from './../pages/perfil-usuario/perfil-usuario';
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
   authDomain: "side-d22aa.firebaseapp.com",
@@ -32,10 +34,10 @@ const firebaseConfig = {
     MyApp,
     HomePage,
     CadastroCandidatoPage,
-
     CadastroEmpresaPage,
     HomeCandidatoPage,
-    PerfilUsuarioPage
+    PerfilUsuarioPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ const firebaseConfig = {
     CadastroCandidatoPage,
     CadastroEmpresaPage,
     HomeCandidatoPage,
-    PerfilUsuarioPage
+    PerfilUsuarioPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

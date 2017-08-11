@@ -1,0 +1,39 @@
+page-login {
+    ion-content{
+        background: url('../imagens/login.png') no-repeat center top fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        
+    }
+
+    .logo{
+        padding: 40px;
+    }
+
+    ion-item {
+      background-color: transparent !important;
+    }
+
+    .margin-top{
+        margin-top: 30px;
+    }
+
+    .centralize{
+        align-content: center;
+        align-items: center;
+    }
+
+    .margin-bottom{
+        padding-bottom: 100px;
+    }
+    
+    .footer{
+        bottom: 0px;
+    }
+
+
+
+}
