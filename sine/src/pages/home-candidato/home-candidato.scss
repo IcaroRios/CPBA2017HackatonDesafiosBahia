@@ -32,7 +32,21 @@ page-home-candidato {
         background-color: white;
     }
     h2{
-        color: #0064AA;
+        color: #0064AA !important;
+    }
+
+    .centralize{
+        text-align: center;  
+        align-self: center;
+    }
+
+
+    .title{
+      text-align: center;  
+    }
+
+    .card-margin{
+        margin-bottom: 15px;
     }
 
 }
