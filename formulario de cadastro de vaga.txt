@@ -1,0 +1,10 @@
+iniciativa ?
+contratação
+ocupação
+quantidade de vagas
+
+
+O  aplicativo Bahia Empregos, visa otimizar o preenchimento de vagas de uma empresa.
+O  aplicativo Bahia Empregos, visa otimizar o processo de seleção de candidatos a uma vaga de emprego.
+O  aplicativo Bahia Empregos, visa facilitar a busca por candidatos ou vagas para vínculos empregatícios.
+O  aplicativo Bahia Empregos, visa otimizar o contato de candidatos e empresas para a criação de vínculos empregatícios de forma ágil e eficiente.
