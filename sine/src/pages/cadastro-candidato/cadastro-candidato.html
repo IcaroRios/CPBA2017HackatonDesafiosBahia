@@ -17,22 +17,22 @@
 
     <ion-item>
       <ion-label color="azulbahia" floating>Nome</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" v-model="candidato.nome"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="azulbahia" floating>E-mail</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" v-model="candidato.email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="azulbahia" floating>Senha</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" v-model="senha"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label color="azulbahia" floating>Repetir senha</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" v-model="repSenha"></ion-input>
     </ion-item>
 
     <ion-grid class="margintop30">
