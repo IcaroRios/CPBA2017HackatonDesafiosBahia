@@ -16,13 +16,13 @@
 <ion-content padding>
 
     <ion-item>
-      <ion-label color="azulbahia" floating>Nome</ion-label>
-      <ion-input type="text" [(ngModel)]="empresa.Nome"></ion-input>
+      <ion-label color="azulbahia" floating>CNPJ</ion-label>
+      <ion-input type="number"[(ngModel)]="empresa.CNPJ" (blur)="pesquisarEmpresa()"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="azulbahia" floating>CNPJ</ion-label>
-      <ion-input type="text"[(ngModel)]="empresa.CNPJ"></ion-input>
+      <ion-label color="azulbahia" floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="empresa.nome"></ion-input>
     </ion-item>
 
     <ion-item>

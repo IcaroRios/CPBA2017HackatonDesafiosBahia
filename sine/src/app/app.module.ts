@@ -7,8 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { Http } from '@angular/http';
-
+import {HttpModule} from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
@@ -38,6 +37,7 @@ const firebaseConfig = {
     PerfilUsuarioPage
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
@@ -55,7 +55,6 @@ const firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
-    Http,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseProvider,
     CripSenhaProvider
