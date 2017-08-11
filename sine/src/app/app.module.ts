@@ -14,6 +14,9 @@ import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
 import { CadastroCandidatoPage } from '../pages/cadastro-candidato/cadastro-candidato';
 import { CripSenhaProvider } from '../providers/crip-senha/crip-senha';
+import { CadastroEmpresaPage } from '../pages/cadastro-empresa/cadastro-empresa';
+import { HomeCandidatoPage } from '../pages/home-candidato/home-candidato';
+import { PerfilUsuarioPage } from './../pages/perfil-usuario/perfil-usuario';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
@@ -28,7 +31,11 @@ const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-    CadastroCandidatoPage
+    CadastroCandidatoPage,
+
+    CadastroEmpresaPage,
+    HomeCandidatoPage,
+    PerfilUsuarioPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,10 @@ const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    CadastroCandidatoPage
+    CadastroCandidatoPage,
+    CadastroEmpresaPage,
+    HomeCandidatoPage,
+    PerfilUsuarioPage
   ],
   providers: [
     StatusBar,
