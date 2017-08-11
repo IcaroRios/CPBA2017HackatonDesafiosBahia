@@ -7,19 +7,19 @@
   <!-- LOGIN FORM -->
   <div class="footer">
     <ion-item class="centralize">
-      <ion-label color="azulbahia" floating>Nome</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label color="azulbahia" floating>E-mail</ion-label>
+      <ion-input type="text" [(ngModel)]="email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label color="azulbahia" floating>E-mail</ion-label>
-      <ion-input type="text" ></ion-input>
+      <ion-label color="azulbahia" floating>Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="senha"></ion-input>
     </ion-item>
     
     <ion-grid class="margin-bottom">
       <ion-row class="margin-top">
         <ion-col col-5>
-          <button color="azulbahia" ion-button block (click)="cadastrar()">Login</button>
+          <button color="azulbahia" ion-button block (click)="logar()">Login</button>
         </ion-col>
         <ion-col col-5 offset-2>
           <button color="vermelhobahia" ion-button block (click)="cadastrar()">Cadastrar</button>
