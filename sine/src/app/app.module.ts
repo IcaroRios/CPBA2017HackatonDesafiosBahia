@@ -33,6 +33,7 @@ import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
 import { CompetenciasPage } from './../pages/competencias/competencias';
 import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { CandidatoAgendamentoPage } from './../pages/candidato-agendamento/candidato-agendamento';
+import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
 
 
 const firebaseConfig = {
@@ -63,7 +64,8 @@ const firebaseConfig = {
     CertificacoesPage,
     ExperienciaPage,
     CandidatoAgendamentoPage,
-    ProcurarVagaPage
+    ProcurarVagaPage,
+    EmpresaBuscarPage
   ],
   imports: [
     HttpModule,
@@ -92,7 +94,8 @@ const firebaseConfig = {
     CertificacoesPage,
     ExperienciaPage,
     CandidatoAgendamentoPage,
-    ProcurarVagaPage
+    ProcurarVagaPage,
+    EmpresaBuscarPage
     
   ],
   providers: [
