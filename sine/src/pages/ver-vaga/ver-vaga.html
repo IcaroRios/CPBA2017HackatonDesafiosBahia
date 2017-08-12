@@ -29,17 +29,24 @@
     <p>Experiência profissional (Meses): {{vaga.mesesProfissional}}</p>
     <p>Escolaridade: {{vaga.escolaridade}}</p>
     <p>Gênero: {{vaga.genero}}</p>
-    <p>Curso Tecnico: {{vaga.cursoTecnico}}</p>
-    <p>Curso Superior: {{vaga.cursoSuperior}}</p>
-    <p>Pós-graduação: {{vaga.posGraduacao}}</p>
-    <p>Habilidades: {{vaga.habilidades}}</p>
-    <p>Certificações: {{vaga.certificacoes}}</p>
-    <p>Faixa etária: {{vaga.inicial}} até {{vaga.final}}</p>
-    <p>Pós-graduação: {{vaga.posGraduacao}}</p>
+    <p *ngFor="let cursoTecnico of vaga.cursoTecnico">
+      Curso Tecnico: {{cursoTecnico.nome}}
+    </p>
+    <p *ngFor="let cursoSuperior of vaga.cursoSuperior">
+      Curso Superior: {{cursoSuperior.nome}}
+    </p>
+    <p *ngFor = "let posGraduacao of vaga.posGraduacao">
+      Pós-graduação: {{posGraduacao.nome}}
+    </p>
+    <p *ngFor = "let habilidades of vaga.habilidades">
+      Habilidades: {{habilidades.nome}}</p>
+    <p *ngFor = "let certificacoes of vaga.certificacoes">
+      Certificações: {{certificacoes.nome}}</p>
+    <p>Faixa etária: {{vaga.inicial}} até {{vaga.final}}</p>    
     <p>Aceita Deficiente: {{vaga.deficiente}}</p>
     <p>Habilitação: {{vaga.habilitacao}}</p>
     <p>Viagens: {{vaga.viagens}}</p>
-    <p>Dormir: {{vagas.dormir}}</p>
+    <p>Dormir: {{vaga.dormir}}</p>
     <hr>
     <h4>Informações financeiras</h4>
     <hr>

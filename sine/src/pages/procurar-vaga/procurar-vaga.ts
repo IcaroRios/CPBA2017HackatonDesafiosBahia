@@ -39,13 +39,11 @@ export class ProcurarVagaPage {
 
   getItems() {
     // Reset items back to all of the items
-    this.initializeItems();
-    console.log(this.vagasAux);
     // set val to the value of the searchbar
 
     // if the value is an empty string don't filter the items
     this.vagas = this.vagasAux.filter((item) => {
-      return (item.nome.toLowerCase().indexOf(this.search.toLowerCase()) > -1);
+      return (item.ocupacao.toLowerCase().indexOf(this.search.toLowerCase()) > -1);
     })
   }
 
