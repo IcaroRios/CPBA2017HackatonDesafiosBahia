@@ -23,7 +23,7 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = DadosUsuarioPage;
+  rootPage: any = PerfilUsuarioPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 

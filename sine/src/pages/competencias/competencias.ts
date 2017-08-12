@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { NavController, NavParams, ToastController } from 'ionic-angular';
+import { Candidato } from '../../model/candidato';
+import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
 /**
  * Generated class for the CompetenciasPage page.
  *
@@ -8,18 +10,72 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-competencias',
   templateUrl: 'competencias.html',
 })
 export class CompetenciasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private candidato: Candidato = new Candidato();
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+    private fbService: FirebaseProvider,
+    private native: NativeStorageProvider,
+    private toastCtrl: ToastController,
+
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CompetenciasPage');
+  }
+
+  tecnico() {
+    if (this.candidato.cursoTecnico[this.candidato.cursoTecnico.length - 1].nome != "") {
+      this.candidato.cursoTecnico.push({ nome: '' });
+    }
+  }
+
+  graduacao() {
+    if (this.candidato.posGraduacao[this.candidato.posGraduacao.length - 1].nome != "") {
+      this.candidato.posGraduacao.push({ nome: '' });
+    }
+  }
+
+  superior() {
+    if (this.candidato.cursoSuperior[this.candidato.cursoSuperior.length - 1].nome != "") {
+      this.candidato.cursoSuperior.push({ nome: '' });
+    }
+  }
+
+  idiomasF() {
+    if (this.candidato.idiomas[this.candidato.idiomas.length - 1].nome != "") {
+      this.candidato.idiomas.push({ nome: '' });
+    }
+  }
+
+  habilidades() {
+    if (this.candidato.habilidades[this.candidato.habilidades.length - 1].nome != "") {
+      this.candidato.habilidades.push({ nome: '' });
+    }
+  }
+
+  salvarInformacoes() {
+    console.log(this.candidato);
+    this.fbService.updateCandidato(this.candidato.key, this.candidato).then(() => {
+      this.mensagem("Alterado com sucesso");
+      this.native.set("user", this.candidato);
+    });
+  }
+
+   mensagem(message) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    });
+    toast.present();
   }
 
 }
