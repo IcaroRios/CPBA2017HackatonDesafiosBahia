@@ -53,7 +53,7 @@ export class HomeCandidatoPage {
             this.usuario = userAtual;
             console.log(usuario);
             this.getVagas();
-            
+
           }
         });
       });
@@ -63,7 +63,6 @@ export class HomeCandidatoPage {
   getVagas() {
     this.fbService.getVagasCandidato().subscribe(vaga => {
       if (this.usuario.ocupacao) {
-
         this.usuario.ocupacao.map(profissaoAtual => {
           if (vaga) {
             vaga.map(vagaAtual => {
@@ -73,11 +72,11 @@ export class HomeCandidatoPage {
                   this.empregos.push(vagaAtual);
                 }
               }
-            });                    
-          }          
-        });        
-      }      
-    });    
+            });
+          }
+        });
+      }
+    });
   }
 
   abrirPage(page) {

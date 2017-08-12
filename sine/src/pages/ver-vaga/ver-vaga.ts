@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { NativeStorageProvider } from './../../providers/native-storage/native-storage';
 import { FirebaseProvider } from './../../providers/firebase/firebase';
 import { Vaga } from './../../model/vaga';
+import { Convite } from '../../model/convite';
 /**
  * Generated class for the VerVagaPage page.
  *
@@ -17,15 +18,20 @@ import { Vaga } from './../../model/vaga';
 export class VerVagaPage {
 
   private vaga: Vaga = new Vaga();
-
+  private usuario;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private native: NativeStorageProvider,
-    private fbService: FirebaseProvider
+    private fbService: FirebaseProvider,
+    private toastCtrl: ToastController
   ) {
     this.vaga = this.navParams.get('vaga');
     console.log(this.vaga);
+
+    this.native.get('user').then(res=>{
+      this.usuario = res;
+    });
 
     if (!this.vaga.cursoTecnico) {
       this.vaga.cursoTecnico = [{ nome: '' }];
@@ -43,6 +49,25 @@ export class VerVagaPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad VerVagaPage');
+  }
+
+  cadidatar(){
+    let convite = new Convite();
+    convite.empresa = this.vaga.empresaKey;
+    convite.empresaNome = this.vaga.empresa;
+    convite.usuario = this.usuario.key;
+    convite.usuarioNome = this.usuario.nome;
+    this.fbService.cadastrarConvite(convite).then(()=>{
+      this.mensagem("Voce se candidatou a vaga com sucesso");
+    });
+  }
+
+  mensagem(message) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    });
+    toast.present();
   }
 
 }
