@@ -18,12 +18,14 @@ import { CompetenciasPage } from './../pages/competencias/competencias';
 import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
 import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { HomePage } from '../pages/home/home';
+import { CandidatoAgendamentoPage } from './../pages/candidato-agendamento/candidato-agendamento';
+
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = DadosUsuarioPage;
+  rootPage: any = CandidatoAgendamentoPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
