@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the VerVagaPage page.
@@ -8,14 +8,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-ver-vaga',
   templateUrl: 'ver-vaga.html',
 })
 export class VerVagaPage {
 
+  private vaga;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.vaga = this.navParams.get("vaga");
   }
 
   ionViewDidLoad() {

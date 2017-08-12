@@ -21,7 +21,7 @@
   <div *ngFor="let experiencia of candidato.experiencias">
     <ion-item>
       <ion-label color="azulbahia" floating>Cargo</ion-label>
-      <ion-input type="text" [(ngModel)]="experiencia.cargo"></ion-input>
+      <ion-input type="text" [(ngModel)]="experiencia.cargo" (keyup)="experienciasF()"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -40,6 +40,7 @@
         <ion-option value="Não">Não</ion-option>
       </ion-select>
     </ion-item>
+    <hr>
   </div>
 
   <ion-grid class="margintop30">

@@ -55,7 +55,7 @@
     <h4>Principais Vagas</h4>
   </div>
   <div class="vagas" *ngFor="let vaga of empregos">
-    <ion-item>
+    <ion-item (click)="abrirVaga(vaga)">
       <h2>{{vaga.ocupacao}} ({{vaga.quantidade}} vagas)</h2>
       <h4>{{vaga.empresa}}</h4>
       <h4>{{vaga.data}}</h4>      
