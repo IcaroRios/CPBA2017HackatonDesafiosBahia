@@ -5,6 +5,7 @@ import { PerfilUsuarioPage } from '../perfil-usuario/perfil-usuario';
 import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
 import { LoginPage } from '../login/login';
 import { Vaga } from '../../model/vaga';
+import { VerVagaPage } from '../ver-vaga/ver-vaga';
 /**
  * Generated class for the HomeCandidatoPage page.
  *
@@ -189,4 +190,7 @@ export class HomeCandidatoPage {
 
   }
 
+  abrirVaga(vaga){
+    this.navCtrl.push(VerVagaPage, {vaga: vaga})
+  }
 }
