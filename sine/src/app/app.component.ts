@@ -22,6 +22,7 @@ import { CandidatoAgendamentoPage } from './../pages/candidato-agendamento/candi
 import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
 import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
 
+import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
 
 
 @Component({
