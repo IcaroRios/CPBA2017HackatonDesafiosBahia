@@ -16,6 +16,8 @@ page-ver-vaga {
 
     h4 {
       color: #95989A;
+      text-align: center;
+      text-transform: uppercase;
     }
 
     div>h4 {
@@ -45,5 +47,9 @@ page-ver-vaga {
     }
 
     .card-margin {
+    }
+
+    ion-card{
+      padding: 10px 20px;
     }
 }
