@@ -50,6 +50,15 @@ export class FirebaseProvider {
     return this.afdb.list('/empresas/');
   }
 
+  getVagasEmpresa(key) {
+    return this.afdb.list('/candidatos/', {
+      query: {
+        orderByChild: 'empresa',
+        equalTo: key
+      }
+    });
+  }
+
   cancelarAgendamento(agendamento) {
     return this.afdb.list('/agendamentos/').remove(agendamento);
   }
@@ -82,16 +91,16 @@ export class FirebaseProvider {
     });
   }
 
-  buscarCandidadosVaga(vaga) {
-    return this.afdb.list('/candidatos/', {
-      query: {
-        orderByChild: 'ocupacao',
-        equalTo: vaga
-      }
-    });
-  }
+  // buscarCandidadosVaga(vaga) {
+  //   return this.afdb.list('/candidatos/', {
+  //     query: {
+  //       orderByChild: 'ocupacao',
+  //       equalTo: vaga
+  //     }
+  //   });
+  // }
 
-  updateCandidato(key, candidato){
+  updateCandidato(key, candidato) {
     console.log(key);
     return this.afdb.list('/candidatos/').update(key, candidato);
   }

@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { Vaga } from '../../model/vaga';
 import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
+import { NovaVagaPage } from '../nova-vaga/nova-vaga';
 /**
  * Generated class for the EmpresaVagasPage page.
  *
@@ -25,19 +26,19 @@ export class EmpresaVagasPage {
     private nativeStorage: NativeStorageProvider
   ) {
     this.nativeStorage.get('user').then(usuario => {
-      this.fbService.getEmpresa().subscribe(empresa => {
-        empresa.map(empresaAtual => {
-          if (empresaAtual.$key == usuario.key) {
-            this.vagas = empresaAtual.vagas;
-            console.log(this.vagas);
-          }
-        });
+      this.fbService.getVagasEmpresa(usuario.key)
+      .subscribe(vaga=>{
+        this.vagas = vaga;
       });
     });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EmpresaVagasPage');
+  }
+
+  novaVaga(){
+    this.navCtrl.push(NovaVagaPage);
   }
 
 }
