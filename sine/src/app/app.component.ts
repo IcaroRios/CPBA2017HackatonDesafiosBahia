@@ -25,11 +25,16 @@ import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
 import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
 
 
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
+  rootPage: any = ExperienciaPage;
+=======
   rootPage: any = CompetenciasPage;
+>>>>>>> 31592aaaff3a679ea4480723c84a9a1c497904ee
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
