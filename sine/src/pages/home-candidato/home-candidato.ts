@@ -24,7 +24,8 @@ export class HomeCandidatoPage {
   perfilPage = PerfilUsuarioPage;
   agendaPage = CandidatoAgendamentoPage;
   private usuario = undefined;
-  private empregos: Vaga[] = [];
+  private empregos = [];
+  
 
   constructor(
     public navCtrl: NavController,
@@ -69,9 +70,40 @@ export class HomeCandidatoPage {
           }
         });
       });
+            //this.ordenar();
     });
   }
+  ordenar(){
+    let tamanho = this.empregos.length;
+    let maximo = 100;
+    let count = [maximo+1];
 
+    for (var index = 0; index < tamanho; ++index) {
+      count[this.empregos[index]] = count[this.empregos[index]]+1;     
+    }
+
+    for (var index = 0; index < tamanho; ++index ){
+      count[index] += count[index - 1];
+    }
+
+    let output = [maximo];
+    
+    for (var index = 0; index < tamanho; ++index ){
+      output[count[this.empregos[index]] -1 ] = this.empregos[index];
+      count[this.empregos[index]]--;
+    }
+    for (var index = 0; index < tamanho; ++index) {
+      this.empregos[index] = output[index];      
+    }
+    for (var index = 0; index < tamanho; index++) {
+      console.log(this.empregos[index].peso);
+      
+    }
+    //console.log(this.empregos[0].peso);
+    //console.log(this.empregos[1].peso);
+    //console.log(this.empregos[2].peso);
+
+  }
   abrirPage(page) {
     this.navCtrl.push(page);
   }
