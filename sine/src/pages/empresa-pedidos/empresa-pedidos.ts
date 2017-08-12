@@ -46,8 +46,8 @@ export class EmpresaPedidosPage {
 
   convidar(convite, dados) {
     this.fbServe.agendar(convite);
-    convite.data = dados.data;
-    convite.local = dados.local;
+    convite.data = '20/10/2017';
+    convite.local = 'Na Empresa';
     this.fbServe.agendar(convite).then(() => {
       this.mensagem("removido com sucesso");
       this.fbServe.removerConvite(convite);

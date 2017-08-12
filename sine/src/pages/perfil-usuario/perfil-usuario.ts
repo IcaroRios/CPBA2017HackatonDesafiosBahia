@@ -1,9 +1,11 @@
+import { FeedbackPage } from './../feedback/feedback';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DadosUsuarioPage } from '../dados-usuario/dados-usuario';
 import { CompetenciasPage } from '../competencias/competencias';
 import { CertificacoesPage } from '../certificacoes/certificacoes';
-import { ExperienciaPage } from '../experiencia/experiencia'
+import { ExperienciaPage } from '../experiencia/experiencia';
+
 @Component({
   selector: 'page-perfil-usuario',
   templateUrl: 'perfil-usuario.html',
@@ -14,6 +16,7 @@ export class PerfilUsuarioPage {
   competenciaPage = CompetenciasPage;
   certificacoesPage = CertificacoesPage;
   experienciaPage = ExperienciaPage;
+  feedbackPage = FeedbackPage;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams
