@@ -30,6 +30,7 @@ export class Candidato {
     public posGraduacao = [{nome:''}];
     public idiomas = [{nome:''}];
     public habilidades = [{nome:''}];
+    public certificacoes = [{ nome: '' }];
     public municipio:string="";
     public ufMoradia:string="";
     public zonaMoradia: string = "";
@@ -59,6 +60,7 @@ export class Candidato {
     public economiaSolidaria: string = "";
     public bolsaFamilia: string = "";
     public gestorPoliticaPublica: string="";
+    public cargoAtuacao: String="";
 
     constructor() {
 

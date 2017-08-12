@@ -1,3 +1,4 @@
+import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
 import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
 
 
@@ -63,8 +64,9 @@ const firebaseConfig = {
     CompetenciasPage,
     CertificacoesPage,
     ExperienciaPage,
-    CandidatoAgendamentoPage,
     ProcurarVagaPage,
+    PreCadastroPage,
+    CandidatoAgendamentoPage,
     EmpresaBuscarPage
   ],
   imports: [
@@ -93,8 +95,9 @@ const firebaseConfig = {
     CompetenciasPage,
     CertificacoesPage,
     ExperienciaPage,
-    CandidatoAgendamentoPage,
     ProcurarVagaPage,
+    PreCadastroPage,
+    CandidatoAgendamentoPage,
     EmpresaBuscarPage
     
   ],
