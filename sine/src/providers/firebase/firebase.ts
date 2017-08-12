@@ -67,6 +67,14 @@ export class FirebaseProvider {
     });
   }
 
+  getVagasCandidato() {
+    return this.afdb.list('/vagas/', {
+      query: {
+        orderByChild: 'data'
+      }
+    });
+  }
+
   cancelarAgendamento(agendamento) {
     return this.afdb.list('/agendamentos/').remove(agendamento);
   }

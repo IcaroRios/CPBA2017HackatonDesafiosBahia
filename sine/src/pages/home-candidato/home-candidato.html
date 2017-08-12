@@ -54,11 +54,12 @@
   <div>
     <h4>Principais Vagas</h4>
   </div>
-  <div class="vagas">
+  <div class="vagas" *ngFor="let vaga of empregos">
     <ion-item>
-      <h2>Analista de sistemas (2 vagas)</h2>
-      <h4>Binarii</h4>
-      <h4>11/08/2017</h4>      
+      <h2>{{vaga.ocupacao}} ({{vaga.quantidade}} vagas)</h2>
+      <h4>{{vaga.empresa}}</h4>
+      <h4>{{vaga.data}}</h4>      
+      <h4>Perfil se enquada: {{vaga.peso}}%</h4>      
     </ion-item>
   </div>
 </ion-content>
