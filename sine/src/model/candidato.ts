@@ -32,6 +32,7 @@ export class Candidato {
     public habilidades = [{nome:''}];
     public certificacoes = [{ nome: '' }];
     public ocupacao = [{ nome: '' }];
+    public experiencias = [{ cargo: '', fontedenIformacao: '', menorAprendiz:'' }];
     public municipio:string="";
     public ufMoradia:string="";
     public zonaMoradia: string = "";

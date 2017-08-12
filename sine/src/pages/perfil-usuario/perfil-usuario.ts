@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { DadosUsuarioPage } from '../dados-usuario/dados-usuario';
 import { CompetenciasPage } from '../competencias/competencias';
 import { CertificacoesPage } from '../certificacoes/certificacoes';
-
+import { ExperienciaPage } from '../experiencia/experiencia'
 @Component({
   selector: 'page-perfil-usuario',
   templateUrl: 'perfil-usuario.html',
@@ -13,7 +13,7 @@ export class PerfilUsuarioPage {
   dadosPage = DadosUsuarioPage;
   competenciaPage = CompetenciasPage;
   certificacoesPage = CertificacoesPage;
-
+  experienciaPage = ExperienciaPage;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams
