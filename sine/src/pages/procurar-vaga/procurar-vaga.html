@@ -14,7 +14,7 @@
 
 <ion-content padding>
 
-  <ion-searchbar [showCancelButton]="shouldShowCancel" placeholder="Cargo" (ionInput)="getItems()">
+  <ion-searchbar [showCancelButton]="shouldShowCancel" placeholder="Cargo" (ionInput)="getItems()" [(ngModel)]="search">
   </ion-searchbar>
 
   <div class="vagas" *ngFor="let vaga of vagas">

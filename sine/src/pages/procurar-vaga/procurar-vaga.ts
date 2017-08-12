@@ -23,14 +23,15 @@ export class ProcurarVagaPage {
     public navParams: NavParams,
     private fbService: FirebaseProvider
   ) {
+    this.initializeItems();
     this.fbService.getVagasCandidato().subscribe(vagas => {
       this.vagas = vagas;
-      this.initializeItems();
+      this.vagasAux = vagas;
     });
   }
 
   initializeItems() {
-    this.vagasAux = this.vagas;
+    this.vagas = this.vagasAux;
   }
 
   ionViewDidLoad() {
@@ -38,13 +39,13 @@ export class ProcurarVagaPage {
   }
 
   getItems() {
+    this.initializeItems();
     // Reset items back to all of the items
     // set val to the value of the searchbar
-
     // if the value is an empty string don't filter the items
-    this.vagas = this.vagasAux.filter((item) => {
+    this.vagas = this.vagas.filter((item) => {
       return (item.ocupacao.toLowerCase().indexOf(this.search.toLowerCase()) > -1);
-    })
+    });
   }
 
 

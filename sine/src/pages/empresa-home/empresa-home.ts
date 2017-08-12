@@ -4,6 +4,7 @@ import { NativeStorageProvider } from '../../providers/native-storage/native-sto
 import { LoginPage } from '../login/login';
 import { EmpresaAgendamentoPage } from '../empresa-agendamento/empresa-agendamento';
 import { EmpresaVagasPage } from '../empresa-vagas/empresa-vagas';
+import { EmpresaPedidosPage } from '../empresa-pedidos/empresa-pedidos';
 
 /**
  * Generated class for the EmpresaHomePage page.
@@ -21,6 +22,7 @@ export class EmpresaHomePage {
   private usuario = undefined;
   agendamentoPage = EmpresaAgendamentoPage;
   vagasPage = EmpresaVagasPage;
+  pedidosPage = EmpresaPedidosPage;
 
   constructor(
     public navCtrl: NavController,

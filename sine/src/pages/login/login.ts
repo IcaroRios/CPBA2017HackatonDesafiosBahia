@@ -6,6 +6,7 @@ import { CripSenhaProvider } from '../../providers/crip-senha/crip-senha';
 import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
 import { HomeCandidatoPage } from '../home-candidato/home-candidato';
 import { EmpresaHomePage } from '../empresa-home/empresa-home';
+import { PushService } from '../../providers/push-notification/push-notification';
 /**
  * Generated class for the LoginPage page.
  *
@@ -28,7 +29,8 @@ export class LoginPage {
     public fbService: FirebaseProvider,
     public cripService: CripSenhaProvider,
     private toastCtrl: ToastController,
-    private nativeStorage: NativeStorageProvider
+    private nativeStorage: NativeStorageProvider,
+    private pushN: PushService
 
   ) {
 
@@ -47,6 +49,7 @@ export class LoginPage {
               usuario.key = response[0].$key;
               this.nativeStorage.set("user", usuario).then(() => {
                 this.navCtrl.setRoot(EmpresaHomePage);
+                this.pushN.addTag("empresario");
               });
             } else {
               this.mensagem("senha incorreta");
@@ -59,6 +62,7 @@ export class LoginPage {
           usuario.key = res[0].$key;
           this.nativeStorage.set("user", usuario).then(() => {
             this.navCtrl.setRoot(HomeCandidatoPage);
+            this.pushN.addTag("usuario");
           });
         } else {
           this.mensagem("senha incorreta");

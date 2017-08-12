@@ -29,6 +29,7 @@ import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
 import { LoginPage } from './../pages/login/login';
 import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
 import { NativeStorageProvider } from '../providers/native-storage/native-storage';
+import { PushService } from '../providers/push-notification/push-notification';
 import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-agendamento';
 import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
 import { NovaVagaPage } from './../pages/nova-vaga/nova-vaga';
@@ -37,7 +38,7 @@ import { CompetenciasPage } from './../pages/competencias/competencias';
 import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { CandidatoAgendamentoPage } from './../pages/candidato-agendamento/candidato-agendamento';
 import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
-
+import { OneSignal } from '@ionic-native/onesignal';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAZCyzyHuF_rEkoh3r_fRueZcTPwcc6nuw",
@@ -113,7 +114,9 @@ const firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseProvider,
     CripSenhaProvider,
-    NativeStorageProvider
+    NativeStorageProvider,
+    OneSignal,
+    PushService
   ]
 })
 export class AppModule { }
