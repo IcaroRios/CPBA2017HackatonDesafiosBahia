@@ -74,6 +74,7 @@ export class HomeCandidatoPage {
               }
             });
           }
+          this.ordenar();
         });
       }
     });
