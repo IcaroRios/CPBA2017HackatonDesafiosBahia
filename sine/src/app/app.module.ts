@@ -1,3 +1,5 @@
+import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
+import { VerVagaPage } from './../pages/ver-vaga/ver-vaga';
 import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
 import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
 
@@ -67,7 +69,9 @@ const firebaseConfig = {
     ProcurarVagaPage,
     PreCadastroPage,
     CandidatoAgendamentoPage,
-    EmpresaBuscarPage
+    EmpresaBuscarPage,
+    VerVagaPage,
+    PesosVagaPage
   ],
   imports: [
     HttpModule,
@@ -98,7 +102,9 @@ const firebaseConfig = {
     ProcurarVagaPage,
     PreCadastroPage,
     CandidatoAgendamentoPage,
-    EmpresaBuscarPage
+    EmpresaBuscarPage,
+    PesosVagaPage,
+    VerVagaPage
     
   ],
   providers: [

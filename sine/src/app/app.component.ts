@@ -23,6 +23,9 @@ import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
 import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
 
 import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
+import { VerVagaPage } from './../pages/ver-vaga/ver-vaga';
+import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
+
 
 
 
