@@ -32,10 +32,19 @@ export class DadosUsuarioPage {
   ) {
     this.native.get('user').then(usuario => {
       this.candidato = usuario;
+      
+      if (!this.candidato.ocupacao){
+        this.candidato.ocupacao = [{ nome: '' }];
+      }
       console.log(this.candidato);
     });
   }
 
+  ocupacao() {
+    if (this.candidato.ocupacao[this.candidato.ocupacao.length - 1].nome != "") {
+      this.candidato.ocupacao.push({ nome: '' });
+    }
+  }
   mensagem(message) {
     let toast = this.toastCtrl.create({
       message: message,
