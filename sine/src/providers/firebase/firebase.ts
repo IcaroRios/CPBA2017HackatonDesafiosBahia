@@ -53,7 +53,7 @@ export class FirebaseProvider {
   getConviteEmpresa(key) {
     return this.afdb.list('/convites/', {
       query: {
-        orderByChild: 'empresaKey',
+        orderByChild: 'empresa',
         equalTo: key
       }
     });
@@ -90,6 +90,10 @@ export class FirebaseProvider {
 
   cancelarAgendamento(agendamento) {
     return this.afdb.list('/agendamentos/').remove(agendamento);
+  }
+
+  removerConvite(convite) {
+    return this.afdb.list('/convites/').remove(convite);
   }
 
   loginUsuario(email) {

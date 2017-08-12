@@ -69,32 +69,7 @@ export class DadosUsuarioPage {
   }
 
   validarCPF() {
-    if (this.candidato.cpf) {
-      if (this.candidato.cpf.length == 11) {
-        let numero = this.candidato.cpf.toString();
-        let ultimoDigito = 0;
-        let penultimoDigito = 0;
-        for (let i = 0; i < 10; i++) {
-          if (i < 9) {
-            penultimoDigito += (+numero[i] * (10 - i));
-            ultimoDigito += (+numero[i] * (11 - i));
-          } else
-            ultimoDigito += (+numero[i] * (11 - i));
-        }
-        penultimoDigito = penultimoDigito * 10;
-        ultimoDigito = ultimoDigito * 10;
-
-        penultimoDigito = penultimoDigito % 11;
-        ultimoDigito = ultimoDigito % 11;
-        if (penultimoDigito.toString() == numero[numero.length - 2] && ultimoDigito.toString() == numero[numero.length - 1])
-          return true;
-        else
-          return false;
-
-      } else {
-        this.mensagem("CPF invalido");
-      }
-    }
+   return true;
   }
 
   getProfissioes() {

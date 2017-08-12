@@ -80,25 +80,10 @@ export class CadastroEmpresaPage {
     }
     if (this.senha == this.repSenha) {
       if (this.empresa.CNPJ) {
-        this.http.get("https://www.receitaws.com.br/v1/cnpj/" + this.empresa.CNPJ, { headers: this.headers })
-          .toPromise()
-          .then(response => {
-            if (response.json().nome) {
-              if (this.empresa.nome == response.json().nome) {
-                this.empresa.senha = this.cripService.encode(this.senha);
-                console.log(this.empresa);
-                this.fbService.cadastrarEmpresa(this.empresa).then(_ => {
+          this.fbService.cadastrarEmpresa(this.empresa).then(_ => {
                   this.mensagem("Cadastro feito com sucesso");
                   //this.navCtrl.pop();
                 });
-              } else {
-                this.mensagem("Nome de empresa está incoerente");
-              }
-            } else {
-              this.mensagem(response.json().message);
-            }
-          })
-          .catch((error) => this.mensagem("erro ao buscar cnpj"));
       }
     } else {
       this.mensagem("As senhas estão diferentes.");
