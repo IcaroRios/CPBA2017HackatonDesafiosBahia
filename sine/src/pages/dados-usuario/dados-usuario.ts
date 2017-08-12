@@ -60,7 +60,6 @@ export class DadosUsuarioPage {
   }
 
   validarCPF() {
-    console.log(this.candidato.cpf);
     if (this.candidato.cpf) {
       if (this.candidato.cpf.length == 11) {
         let numero = this.candidato.cpf.toString();

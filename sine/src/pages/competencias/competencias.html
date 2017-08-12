@@ -18,7 +18,7 @@
   <hr>
   <ion-item>
     <ion-label color="azulbahia">Escolaridade</ion-label>
-    <ion-select [(ngModel)]="competencias.escolaridade">
+    <ion-select [(ngModel)]="candidato.escolaridade">
       <ion-option value="d">Pós-graduação completa</ion-option>
       <ion-option value="d">Pós-graduação incompleta</ion-option>
       <ion-option value="a">Superior completo</ion-option>
@@ -32,36 +32,47 @@
 
   <ion-item>
     <ion-label color="azulbahia">Estudante</ion-label>
-    <ion-select [(ngModel)]="competencias.estudante">
+    <ion-select [(ngModel)]="candidato.estudante">
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
   </ion-item>
 
-  <ion-item>
-    <ion-label color="azulbahia">Curso Tecnico (separado por ",")</ion-label>
-    <ion-input type="text" [(ngModel)]="competencias.cursoTecnico"></ion-input>
+  <ion-item *ngFor="let cursoTecnico of candidato.cursoTecnico">
+    <ion-label color="azulbahia" floating>Curso Tecnico</ion-label>
+    <ion-input type="text" [(ngModel)]="cursoTecnico.nome" (keyup)="tecnico()"></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label color="azulbahia">Curso Superior (separado por ",")</ion-label>
-    <ion-input type="text" [(ngModel)]="competencias.cursoSuperior"></ion-input>
+  <ion-item *ngFor="let cursoSuperior of candidato.cursoSuperior">
+    <ion-label color="azulbahia" floating>Curso Superior</ion-label>
+    <ion-input type="text" [(ngModel)]="cursoSuperior.nome" (keyup)="superior()"></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label color="azulbahia">Pós-graduação (separado por ",")</ion-label>
-    <ion-input type="text" [(ngModel)]="competencias.posGraduacao"></ion-input>
+  <ion-item *ngFor="let posGraduacao of candidato.posGraduacao">
+    <ion-label color="azulbahia" floating>Pós-graduação</ion-label>
+    <ion-input type="text" [(ngModel)]="posGraduacao.nome" (keyup)="graduacao()"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label color="azulbahia">Idiomas (separado por ",")</ion-label>
-    <ion-input type="text" [(ngModel)]="competencias.idiomas"></ion-input>
+
+  <ion-item *ngFor="let idiomas of candidato.idiomas">
+    <ion-label color="azulbahia" floating>Idiomas</ion-label>
+    <ion-input type="text" [(ngModel)]="idiomas.nome" (keyup)="idiomasF()"></ion-input>
   </ion-item>
 
   <p>Habilidades</p>
   <hr>
-  <ion-item>
-    <ion-label color="azulbahia" floating>Habilidades (separados por ",")</ion-label>
-    <ion-input type="number" [(ngModel)]="competencias.habilidades"></ion-input>
+
+  <ion-item *ngFor="let habilidade of candidato.habilidades">
+    <ion-label color="azulbahia" floating>Habilidades</ion-label>
+    <ion-input type="text" [(ngModel)]="habilidade.nome" (keyup)="habilidades()"></ion-input>
   </ion-item>
+
+  <ion-grid class="margintop30">
+    <ion-row>
+      <ion-col col-4 offset-8>
+        <button color="azulbahia" ion-button (click)="salvarInformacoes()">Salvar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 
 </ion-content>
