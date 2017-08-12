@@ -46,14 +46,18 @@ export class FirebaseProvider {
     return this.afdb.list('/empresas/').push(empresa);
   }
 
+  cadastrarVaga(vaga) {
+    return this.afdb.list('/vagas/').push(vaga);
+  }
+
   getEmpresa() {
     return this.afdb.list('/empresas/');
   }
 
   getVagasEmpresa(key) {
-    return this.afdb.list('/candidatos/', {
+    return this.afdb.list('/vagas/', {
       query: {
-        orderByChild: 'empresa',
+        orderByChild: 'empresaKey',
         equalTo: key
       }
     });

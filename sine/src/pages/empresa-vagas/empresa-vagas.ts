@@ -4,6 +4,7 @@ import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { Vaga } from '../../model/vaga';
 import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
 import { NovaVagaPage } from '../nova-vaga/nova-vaga';
+import { EmpresaBuscarPage } from '../empresa-buscar/empresa-buscar';
 /**
  * Generated class for the EmpresaVagasPage page.
  *
@@ -39,6 +40,10 @@ export class EmpresaVagasPage {
 
   novaVaga(){
     this.navCtrl.push(NovaVagaPage);
+  }
+
+  buscarVaga(vaga){
+    this.navCtrl.push(EmpresaBuscarPage, {vaga: vaga})
   }
 
 }
