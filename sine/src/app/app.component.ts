@@ -26,7 +26,7 @@ import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = PerfilUsuarioPage;
+  rootPage: any = EmpresaHomePage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 

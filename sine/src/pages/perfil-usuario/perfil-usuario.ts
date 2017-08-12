@@ -14,14 +14,17 @@ export class PerfilUsuarioPage {
   competenciaPage = CompetenciasPage;
   certificacoesPage = CertificacoesPage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams
+  ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilUsuarioPage');
   }
 
-  abrirPage(page){
+  abrirPage(page) {
     this.navCtrl.push(page);
   }
 

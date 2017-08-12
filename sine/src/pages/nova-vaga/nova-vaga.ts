@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { Vaga } from '../../model/vaga';
+import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
 
 /**
  * Generated class for the NovaVagaPage page.
@@ -8,14 +10,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-nova-vaga',
   templateUrl: 'nova-vaga.html',
 })
 export class NovaVagaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private vaga: Vaga = new Vaga();
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public native: NativeStorageProvider
+  ) {
+    this.native.get("user").then(usuario => {
+      this.vaga.empresa = usuario.nome;
+      this.vaga.empresaKey = usuario.key;
+    });
   }
 
   ionViewDidLoad() {
