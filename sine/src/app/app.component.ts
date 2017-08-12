@@ -25,6 +25,8 @@ import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
 import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
 import { VerVagaPage } from './../pages/ver-vaga/ver-vaga';
 import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
+import { FeedbackPage } from './../pages/feedback/feedback';
+
 
 
 
@@ -33,7 +35,7 @@ import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = LoginPage;
+  rootPage: any = FeedbackPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
