@@ -33,6 +33,7 @@ export class FirebaseProvider {
   //   return this.afdb.list('/vagas/').update(key, { valor: valor })
   // }
 
+
   cadastrarCandidato(candidato) {
     return this.afdb.list('/candidatos/').push(candidato);
   }
@@ -43,6 +44,10 @@ export class FirebaseProvider {
 
   cadastrarEmpresa(empresa) {
     return this.afdb.list('/empresas/').push(empresa);
+  }
+
+  getEmpresa() {
+    return this.afdb.list('/empresas/');
   }
 
   cancelarAgendamento(agendamento) {
@@ -73,6 +78,15 @@ export class FirebaseProvider {
       query: {
         orderByChild: 'empresa',
         equalTo: key
+      }
+    });
+  }
+
+  buscarCandidadosVaga(vaga) {
+    return this.afdb.list('/candidatos/', {
+      query: {
+        orderByChild: 'ocupacao',
+        equalTo: vaga
       }
     });
   }

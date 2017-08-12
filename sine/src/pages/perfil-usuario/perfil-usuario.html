@@ -9,7 +9,7 @@
 <ion-content padding>
 
   <!-- Cards com as opções do perfil -->
-  <ion-card class="card-margin">
+  <ion-card class="card-margin" (click)="abrirPage(dadosPage)">
         <ion-grid>
           <ion-row>
            <ion-col col-4>
@@ -22,7 +22,7 @@
         </ion-grid>
   </ion-card>
 
-  <ion-card class="card-margin">
+  <ion-card class="card-margin" (click)="abrirPage(experienciaPage)">
     <ion-grid>
       <ion-row>
         <ion-col col-4>
@@ -35,7 +35,7 @@
     </ion-grid>
   </ion-card>
 
-  <ion-card class="card-margin">
+  <ion-card class="card-margin" (click)="abrirPage(competenciaPage)">
     <ion-grid>
       <ion-row>
         <ion-col col-4>
@@ -48,7 +48,7 @@
     </ion-grid>
   </ion-card>
 
-  <ion-card class="card-margin">
+  <ion-card class="card-margin" (click)="abrirPage(certificacoesPage)">
     <ion-grid>
       <ion-row>
         <ion-col col-4>
@@ -61,7 +61,7 @@
     </ion-grid>
   </ion-card>
 
-  <ion-card class="card-margin">
+  <ion-card class="card-margin" (click)="abrirPage(recomendacoesPage)">
     <ion-grid>
       <ion-row>
         <ion-col col-4>
