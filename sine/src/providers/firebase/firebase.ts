@@ -36,11 +36,20 @@ export class FirebaseProvider {
   cadastrarCandidato(candidato) {
     return this.afdb.list('/candidatos/').push(candidato);
   }
-  cadastrarEmpresa(empresa){
+
+  agendar(agendamento) {
+    return this.afdb.list('/agendamentos/').push(agendamento);
+  }
+
+  cadastrarEmpresa(empresa) {
     return this.afdb.list('/empresas/').push(empresa);
   }
 
-  loginUsuario(email){
+  cancelarAgendamento(agendamento) {
+    return this.afdb.list('/agendamentos/').remove(agendamento);
+  }
+
+  loginUsuario(email) {
     return this.afdb.list('/candidatos/', {
       query: {
         orderByChild: 'email',
@@ -49,11 +58,21 @@ export class FirebaseProvider {
     });
   }
 
-  loginEmpresa(email){
+  loginEmpresa(email) {
     return this.afdb.list('/empresas/', {
       query: {
         orderByChild: 'email',
         equalTo: email
+      }
+    });
+  }
+
+  getAgendamentosEmpresa(key) {
+    console.log(key);
+    return this.afdb.list('/agendamentos/', {
+      query: {
+        orderByChild: 'empresa',
+        equalTo: key
       }
     });
   }

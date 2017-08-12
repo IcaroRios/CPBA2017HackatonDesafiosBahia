@@ -36,11 +36,14 @@ export class LoginPage {
     this.fbService.loginUsuario(this.email).subscribe(res => {
       if (!res.length) {//procura se é uma empresa
         this.fbService.loginEmpresa(this.email).subscribe(response => {
+          console.log(response);
           if (!response.length) {
             this.mensagem("Email não esta cadastrado no sistema");
           } else { //empresa
             if (this.cripService.encode(this.senha) == response[0].senha) {
-              this.nativeStorage.set("user", response[0]).then(() => {
+              let usuario = response[0];
+              usuario.key = response[0].$key;
+              this.nativeStorage.set("user", usuario).then(() => {
                 this.navCtrl.setRoot(EmpresaHomePage);
               });
             } else {
@@ -50,7 +53,9 @@ export class LoginPage {
         });
       } else { //candidato
         if (this.cripService.encode(this.senha) == res[0].senha) {
-          this.nativeStorage.set("user", res[0]).then(() => {
+          let usuario = res[0];
+          usuario.key = res[0].$key;
+          this.nativeStorage.set("user", usuario).then(() => {
             this.navCtrl.setRoot(HomeCandidatoPage);
           });
         } else {

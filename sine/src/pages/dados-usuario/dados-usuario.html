@@ -13,27 +13,27 @@
   <hr>
   <ion-item>
     <ion-label color="azulbahia" floating>Identificador(PIS/PASEP/NIS/NIT)</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number"  [(ngModel)]="candidato.Identificador"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Nome</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.nome"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>E-mail</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.email"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Data Nascimento</ion-label>
-    <ion-datetime displayFormat="DD/MM/YYYY"></ion-datetime>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="candidato.dataNascimento" ></ion-datetime>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Gênero</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.sexo">
       <ion-option value="m">Masculino</ion-option>
       <ion-option value="f">Feminio</ion-option>
     </ion-select>
@@ -41,7 +41,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Raça/cor</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.raca">
       <ion-option value="b">Branca</ion-option>
       <ion-option value="a">Amarela</ion-option>
       <ion-option value="n">Negra</ion-option>
@@ -53,7 +53,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Estado Civil</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.estadoCivil">
       <ion-option value="s">Solteiro</ion-option>
       <ion-option value="c">Casado</ion-option>
       <ion-option value="d">Divorciado</ion-option>
@@ -65,17 +65,17 @@
 
   <ion-item>
     <ion-label color="azulbahia" floating>Nacionalidade</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.nacionalidade"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Naturalidade</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.naturalidade"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Naturalizado</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.naturalizado">
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -83,12 +83,12 @@
 
   <ion-item>
     <ion-label color="azulbahia" floating>Estado</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.ufNaturalidade"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Portador de deficiência</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.portadorDeficiencia">
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -96,7 +96,7 @@
   <!-- só exibir se houver deficiencia utilizar "if" -->
   <ion-item>
     <ion-label color="azulbahia">Deficiência</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.deficiencia">
       <ion-option value="f">Física</ion-option>
       <ion-option value="v">Visual</ion-option>
       <ion-option value="a">Auditiva</ion-option>
@@ -106,7 +106,7 @@
 
   <ion-item>
     <ion-label color="azulbahia" floating>Descrever deficiência</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.descricaoDeficiencia"></ion-input>
   </ion-item>
   <!-- fim "if" -->
   <hr>
@@ -115,42 +115,42 @@
   <hr>
   <ion-item>
     <ion-label color="azulbahia" floating>CEP</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.cep"></ion-input>
   </ion-item>
 
     <ion-item>
       <ion-label color="azulbahia" floating>Logradouro</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="candidato.logradouro"></ion-input>
     </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Complemento</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.complemento"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Bairro</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.bairro"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Número</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.numero"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Município</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.municipio"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Estado</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.ufMoradia"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Zona de Moradia</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.zonaMoradia">
       <ion-option value="f">Urbana</ion-option>
       <ion-option value="v">Rural</ion-option>
       <ion-option value="a">Quilombola</ion-option>
@@ -160,53 +160,53 @@
 
   <ion-item>
     <ion-label color="azulbahia" floating>Referencia</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="candidato.referencia"></ion-input>
   </ion-item>
   <hr>
   <p>Contato</p>
   <hr>
   <ion-item>
     <ion-label color="azulbahia" floating>E-mail secundário</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)] = "candidato.emailProfissional"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Telefone</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.primeiroTelefone"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Telefone secundário</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.segundoTelefone"></ion-input>
   </ion-item>
   <hr>
   <p>Documentação</p>
   <hr>
   <ion-item>
-    <ion-label color="azulbahia" floating>Carteira de Identidade</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-label color="azulbahia" floating>Carteira de Identidade (RG)</ion-label>
+    <ion-input type="number" [(ngModel)]="candidato.carteiraIdentidade"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label color="azulbahia" floating>Orgão Emissor (RG)</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label color="azulbahia" floating>Orgão Emissor do RG</ion-label>
+    <ion-input type="text" [(ngModel)]="candidato.orgaoEmissorIdentidade"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>CPF</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.cpf"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Carteira de Trabalho</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.arteiraTrabalhoPrevidencia"></ion-input>
   </ion-item>
   <hr>
   <p>Dados Gerais</p>
   <hr>
   <ion-item>
     <ion-label color="azulbahia">Papel na Família</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.papelFamilia">
       <ion-option value="chegfe">Chefe de família</ion-option>
       <ion-option value="compoe">Compõe a Renda</ion-option>
       <ion-option value="depende">Dependente</ion-option>
@@ -215,22 +215,22 @@
 
   <ion-item>
     <ion-label color="azulbahia" floating>Renda Própria</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.rendaPropria"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Renda Familiar</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.rendaFamiliar"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Número de Membros</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.numeroMembros"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia" floating>Número de Membros (Trabalhando)</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.numeroMembrosTrabalhando"></ion-input>
   </ion-item>
 
   <ion-item>

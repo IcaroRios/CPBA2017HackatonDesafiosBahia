@@ -27,9 +27,11 @@ import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
 import { NativeStorageProvider } from '../providers/native-storage/native-storage';
 import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-agendamento';
 import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
+import { NovaVagaPage } from './../pages/nova-vaga/nova-vaga';
 import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
 import { CompetenciasPage } from './../pages/competencias/competencias';
 import { ExperienciaPage } from './../pages/experiencia/experiencia';
+
 
 
 const firebaseConfig = {
@@ -55,6 +57,7 @@ const firebaseConfig = {
     EmpresaVagasPage,
     EmpresaAgendamentoPage,
     EmpresaPedidosPage,
+    NovaVagaPage,
     CompetenciasPage,
     CertificacoesPage,
     ExperienciaPage
@@ -81,6 +84,7 @@ const firebaseConfig = {
     EmpresaVagasPage,
     EmpresaAgendamentoPage,
     EmpresaPedidosPage,
+    NovaVagaPage,
     CompetenciasPage,
     CertificacoesPage,
     ExperienciaPage

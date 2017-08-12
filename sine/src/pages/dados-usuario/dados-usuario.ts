@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { Candidato } from '../../model/candidato';
+import { Http } from '@angular/http';
+
 /**
  * Generated class for the DadosUsuarioPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
-
-@IonicPage()
 @Component({
   selector: 'page-dados-usuario',
   templateUrl: 'dados-usuario.html',
@@ -18,12 +18,14 @@ export class DadosUsuarioPage {
   private candidato: Candidato = new Candidato();
   private senha: string = "";
   private repSenha: string = "";
+  private profissao = "";
 
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private toastCtrl: ToastController,
+    private http: Http
   ) {
   }
 
@@ -39,27 +41,36 @@ export class DadosUsuarioPage {
     console.log('ionViewDidLoad DadosUsuarioPage');
   }
   salvarInformacoes() {
-    if (!this.candidato.numeroIdentificacao) {
-      this.mensagem("Informe sua indentificação")
-    }
-    if (!this.candidato.nomeMae) {
-      this.mensagem("Informe o nome de sua mãe")
-    } if (!this.candidato.sexo) {
-      this.mensagem("Informe seu sexo")
-    } if (!this.candidato.raca) {
-      this.mensagem("Informe sua raça")
-    } if (!this.candidato.dataNascimento) {
-      this.mensagem("informe sua data de nascimento")
-    } if (!this.candidato.estadoCivil) {
-      this.mensagem("informe seu estado civil")
-    }if(!this.candidato.nacionalidade){
-      this.mensagem("informe sua nacionalidade")
-    }if(!this.candidato.naturalidade){
-      this.mensagem("informe sua naturalidade")
-    }if(!this.candidato.uf){
-      this.mensagem("informe seu UF")
-    }
-    
 
+  }
+
+  validarCPF() {
+    let numero = this.candidato.cpf;
+    let ultimoDigito = 0;
+    let penultimoDigito = 0;
+    for (let i = 0; i < 10; i++) {
+      if (i < 9) {
+        penultimoDigito += (+numero[i] * (10 - i));
+        ultimoDigito += (+numero[i] * (11 - i));
+      } else
+        ultimoDigito += (+numero[i] * (11 - i));
+    }
+    penultimoDigito = penultimoDigito * 10;
+    ultimoDigito = ultimoDigito * 10;
+
+    penultimoDigito = penultimoDigito % 11;
+    ultimoDigito = ultimoDigito % 11;
+    if (penultimoDigito.toString() == numero[numero.length - 2] && ultimoDigito.toString() == numero[numero.length - 1])
+      console.log("CPF válido");
+    else
+      console.log("CPF incorreto");
+
+  }
+
+  getProfissioes() {
+    this.http.get("http://apps.diogomachado.com/api-profissoes/v1?callback=CALLBACK_JSONP&s="+this.profissao)
+    .toPromise().then(profissoes=>{
+      console.log(profissoes)
+    });
   }
 }
