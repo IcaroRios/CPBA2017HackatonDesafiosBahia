@@ -20,10 +20,11 @@
 
 <ion-content padding>
   <div class="vagas">
-    <ion-item>
-      <h2>Nome da empresa</h2>
-      <h4>23/11/2017</h4>
-      <h4>Vaga: Um cargo muito louco</h4>
+    <ion-item *ngFor="let agenda of agendamentos">
+      <h2>{{agenda.empresaNome}}</h2>
+      <h4>{{agenda.data}}</h4>
+      <h4>Local: {{agenda.local}}</h4>
+      <h4>Vaga: {{agenda.vaga}}</h4>
       <button color="vermelhobahia" ion-button (click)="cancelar(agenda)">Cancelar</button>
     </ion-item>
   </div>

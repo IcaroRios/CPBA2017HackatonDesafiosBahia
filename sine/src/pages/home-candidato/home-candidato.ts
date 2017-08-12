@@ -6,6 +6,8 @@ import { NativeStorageProvider } from '../../providers/native-storage/native-sto
 import { LoginPage } from '../login/login';
 import { Vaga } from '../../model/vaga';
 import { VerVagaPage } from '../ver-vaga/ver-vaga';
+import { CandidatoAgendamentoPage } from '../candidato-agendamento/candidato-agendamento';
+
 /**
  * Generated class for the HomeCandidatoPage page.
  *
@@ -20,6 +22,7 @@ import { VerVagaPage } from '../ver-vaga/ver-vaga';
 export class HomeCandidatoPage {
 
   perfilPage = PerfilUsuarioPage;
+  agendaPage = CandidatoAgendamentoPage;
   private usuario = undefined;
   private empregos: Vaga[] = [];
 
@@ -190,7 +193,12 @@ export class HomeCandidatoPage {
 
   }
 
-  abrirVaga(vaga){
-    this.navCtrl.push(VerVagaPage, {vaga: vaga})
+  abrirVaga(vaga) {
+    this.navCtrl.push(VerVagaPage, { vaga: vaga })
+  }
+
+  logout() {
+    this.nativeStorage.logout("user");
+    this.navCtrl.setRoot(LoginPage);
   }
 }

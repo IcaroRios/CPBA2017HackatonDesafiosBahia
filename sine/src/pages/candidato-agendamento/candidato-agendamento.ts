@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
+import { Agendamento } from '../../model/agendamento';
 
 /**
  * Generated class for the CandidatoAgendamentoPage page.
@@ -8,18 +11,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-candidato-agendamento',
   templateUrl: 'candidato-agendamento.html',
 })
 export class CandidatoAgendamentoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private agendamentos: Agendamento[] = [];
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private fbService: FirebaseProvider,
+    private nativeStorage: NativeStorageProvider
+  ) {
+    this.nativeStorage.get('user').then(res => {
+      this.fbService.getAgendamentosCandidato(res.key).subscribe(agendamentos => {
+        this.agendamentos = agendamentos;
+      });
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CandidatoAgendamentoPage');
   }
+
+  cancelar(agenda){
+    this.fbService.cancelarAgendamento(agenda);
+  }
+
 
 }
