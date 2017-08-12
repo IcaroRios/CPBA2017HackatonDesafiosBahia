@@ -35,7 +35,7 @@ import { FeedbackPage } from './../pages/feedback/feedback';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = FeedbackPage;
+  rootPage: any = LoginPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 

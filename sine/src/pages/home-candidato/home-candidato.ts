@@ -51,6 +51,7 @@ export class HomeCandidatoPage {
             userAtual.key = usuarioAtual.$key;
             this.nativeStorage.set('user', userAtual);
             this.usuario = userAtual;
+            console.log(usuario);
             this.getVagas();
             
           }
@@ -84,24 +85,24 @@ export class HomeCandidatoPage {
     let maximo = 100;
     let count = [maximo+1];
 
-    for (var index = 0; index < tamanho; ++index) {
+    for (let index = 0; index < tamanho; ++index) {
       count[this.empregos[index]] = count[this.empregos[index]]+1;     
     }
 
-    for (var index = 0; index < tamanho; ++index ){
+    for (let index = 0; index < tamanho; ++index ){
       count[index] += count[index - 1];
     }
 
     let output = [maximo];
     
-    for (var index = 0; index < tamanho; ++index ){
+    for (let index = 0; index < tamanho; ++index ){
       output[count[this.empregos[index]] -1 ] = this.empregos[index];
       count[this.empregos[index]]--;
     }
-    for (var index = 0; index < tamanho; ++index) {
+    for (let index = 0; index < tamanho; ++index) {
       this.empregos[index] = output[index];      
     }
-    for (var index = 0; index < tamanho; index++) {
+    for (let index = 0; index < tamanho; index++) {
       console.log(this.empregos[index].peso);
       
     }
