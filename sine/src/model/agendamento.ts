@@ -5,6 +5,6 @@ export class Agendamento {
     public empresaNome="";
     public vaga="";
     public data="";
-    public dataShow="";
+    public local="";
     constructor(){}
 }

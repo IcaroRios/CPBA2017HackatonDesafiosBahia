@@ -37,21 +37,24 @@
     </ion-select>
   </ion-item>
 
-  <ion-item *ngFor="let cursoTecnico of candidato.cursoTecnico">
-    <ion-label color="azulbahia" floating>Curso Tecnico</ion-label>
-    <ion-input type="text" [(ngModel)]="cursoTecnico.nome" (keyup)="tecnico()"></ion-input>
-  </ion-item>
-
-  <ion-item *ngFor="let cursoSuperior of candidato.cursoSuperior">
-    <ion-label color="azulbahia" floating>Curso Superior</ion-label>
-    <ion-input type="text" [(ngModel)]="cursoSuperior.nome" (keyup)="superior()"></ion-input>
-  </ion-item>
-
-  <ion-item *ngFor="let posGraduacao of candidato.posGraduacao">
-    <ion-label color="azulbahia" floating>Pós-graduação</ion-label>
-    <ion-input type="text" [(ngModel)]="posGraduacao.nome" (keyup)="graduacao()"></ion-input>
-  </ion-item>
-
+  <div *ngIf="candidato.escolaridade != 'Ensino médio completo' && candidato.escolaridade != 'Ensino médio incompleto'">
+    <ion-item  *ngFor="let cursoTecnico of candidato.cursoTecnico">
+      <ion-label color="azulbahia" floating>Curso Tecnico</ion-label>
+      <ion-input type="text" [(ngModel)]="cursoTecnico.nome" (keyup)="tecnico()"></ion-input>
+    </ion-item>
+  </div>
+  <div *ngIf="candidato.escolaridade != 'Ensino médio completo' && candidato.escolaridade != 'Ensino médio incompleto'">
+    <ion-item  *ngFor="let cursoSuperior of candidato.cursoSuperior">
+      <ion-label color="azulbahia" floating>Curso Superior</ion-label>
+      <ion-input type="text" [(ngModel)]="cursoSuperior.nome" (keyup)="superior()"></ion-input>
+    </ion-item>
+  </div>
+  <div *ngIf="candidato.escolaridade != 'Ensino médio completo' && candidato.escolaridade != 'Ensino médio incompleto'">
+    <ion-item  *ngFor="let posGraduacao of candidato.posGraduacao">
+      <ion-label color="azulbahia" floating>Pós-graduação</ion-label>
+      <ion-input type="text" [(ngModel)]="posGraduacao.nome" (keyup)="graduacao()"></ion-input>
+    </ion-item>
+  </div>
   <ion-item *ngFor="let idiomas of candidato.idiomas">
     <ion-label color="azulbahia" floating>Idiomas</ion-label>
     <ion-input type="text" [(ngModel)]="idiomas.nome" (keyup)="idiomasF()"></ion-input>
@@ -68,7 +71,7 @@
   <ion-grid class="margintop30">
     <ion-row>
       <ion-col col-4 offset-8>
-        <button color="azulbahia" ion-button (click)="salvarInformacoes()">Salvar</button>
+        <button color="vermelhobahia" ion-button (click)="salvarInformacoes()">Salvar</button>
       </ion-col>
     </ion-row>
   </ion-grid>

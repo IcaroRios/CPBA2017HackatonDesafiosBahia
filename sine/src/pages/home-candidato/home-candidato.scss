@@ -1,9 +1,10 @@
 page-home-candidato {
     ion-avatar{
         img{
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50% !important;
+            margin-right: 10px;
         }
         float: left;
     }
@@ -26,6 +27,7 @@ page-home-candidato {
         padding: 0 20px;
     }
     ion-content{
+        margin-top: 20px;
         background-color: #EAFFFF !important;
     }
     .vagas{
