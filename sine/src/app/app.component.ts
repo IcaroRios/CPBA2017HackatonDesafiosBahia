@@ -23,6 +23,9 @@ import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
 import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
 
 import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
+import { VerVagaPage } from './../pages/ver-vaga/ver-vaga';
+import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
+
 
 
 
@@ -47,12 +50,12 @@ export class MyApp {
     //     this.nav.setRoot(NovaVagaPage);
     //   }
     // }).catch(()=>this.nav.setRoot(NovaVagaPage));
-      platform.ready().then(() => {
-        // Okay, so the platform is ready and our plugins are available.
-        // Here you can do any higher level native things you might need.
-        statusBar.styleDefault();
-        splashScreen.hide();
-      });
+    platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      statusBar.styleDefault();
+      splashScreen.hide();
+    });
   }
 }
 

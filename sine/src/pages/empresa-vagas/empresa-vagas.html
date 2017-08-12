@@ -21,9 +21,9 @@
 <ion-content padding>
   <div class="vagas">
     <ion-item *ngFor="let vaga of vagas">
-      <h2>{{vaga.vaga}} ({{vaga.quantidade}} vagas)</h2>
+      <h2>{{vaga.ocupacao}} ({{vaga.quantidade}} vagas)</h2>
       <h4>{{vaga.dataShow}}</h4>
-      <button color="azulbahia" ion-button>Buscar Candidatos</button>
+      <button color="azulbahia" ion-button (click)="buscarVaga(vaga)">Buscar Candidatos</button>
     </ion-item>
   </div>
   <ion-fab right bottom (click)="novaVaga()">

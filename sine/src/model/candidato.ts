@@ -62,6 +62,7 @@ export class Candidato {
     public bolsaFamilia: string = "";
     public gestorPoliticaPublica: string="";
     public cargoAtuacao: String="";
+    public peso;
 
     constructor() {
 

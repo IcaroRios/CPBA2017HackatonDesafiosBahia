@@ -20,26 +20,14 @@
 
 <ion-content padding>
   <div class="vagas">
-    <ion-item>
-      <h2>José Almeida Junior</h2>
-      <h4>11/08/2017</h4>
-      <h4>Compatibilidade: 83%</h4>
+    <ion-item *ngFor="let candidato of candidatos">
+      <h2>{{candidato.nome}}</h2>
+      <h4>{{candidato.dataNascimento}}</h4>
+      <h4>Compatibilidade: {{candidato.peso}}%</h4>
       <ion-grid>
         <ion-row>
           <ion-col col-6>
-            <button color="azulbahia" ion-button>Convidar</button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-    <ion-item>
-      <h2>José Almeida Junior</h2>
-      <h4>11/08/2017</h4>
-      <h4>Compatibilidade: 75%</h4>
-      <ion-grid>
-        <ion-row>
-          <ion-col col-6>
-            <button color="azulbahia" ion-button>Convidar</button>
+            <button color="azulbahia" ion-button (click)="convidar(candidato)">Convidar</button>
           </ion-col>
         </ion-row>
       </ion-grid>

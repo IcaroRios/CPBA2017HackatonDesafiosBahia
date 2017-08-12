@@ -1,15 +1,10 @@
 import { NativeStorageProvider } from './../../providers/native-storage/native-storage';
 import { Candidato } from './../../model/candidato';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Vaga } from '../../model/vaga';
-
-/**
- * Generated class for the NovaVagaPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { PesosVagaPage } from '../pesos-vaga/pesos-vaga';
 
 @Component({
   selector: 'page-nova-vaga',
@@ -20,66 +15,87 @@ export class NovaVagaPage {
   private candidato: Candidato = new Candidato();
   private vaga: Vaga = new Vaga();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private native: NativeStorageProvider) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public native: NativeStorageProvider,
+    private toastCtrl: ToastController,
+    private fbService: FirebaseProvider
+  ) {
     this.native.get("user").then(usuario => {
       this.candidato = usuario;
       this.vaga.empresa = usuario.nome;
       this.vaga.empresaKey = usuario.key;
-      if (!usuario.cursoTecnico) {
+      if (!this.vaga.cursoTecnico) {
         this.candidato.cursoTecnico = [{ nome: '' }];
       }
-      if (!usuario.cursoSuperior) {
+      if (!this.vaga.cursoSuperior) {
         this.candidato.cursoSuperior = [{ nome: '' }];
       }
-      if (!usuario.posGraduacao) {
+      if (!this.vaga.posGraduacao) {
         this.candidato.posGraduacao = [{ nome: '' }];
       }
-      if (!usuario.idiomas) {
+      if (!this.vaga.idiomas) {
         this.candidato.idiomas = [{ nome: '' }];
       }
-      if (!usuario.habilidades) {
+      if (!this.vaga.habilidades) {
         this.candidato.habilidades = [{ nome: '' }];
       }
       if (!this.candidato.certificacoes) {
-        this.candidato.certificacoes.push({ nome: '' });
+        this.candidato.certificacoes = [{ nome: '' }];
       }
     });
   }
 
   tecnico() {
-    if (this.candidato.cursoTecnico[this.candidato.cursoTecnico.length - 1].nome != "") {
-      this.candidato.cursoTecnico.push({ nome: '' });
+    if (this.vaga.cursoTecnico[this.vaga.cursoTecnico.length - 1].nome != "") {
+      this.vaga.cursoTecnico.push({ nome: '' });
     }
   }
 
   graduacao() {
-    if (this.candidato.posGraduacao[this.candidato.posGraduacao.length - 1].nome != "") {
-      this.candidato.posGraduacao.push({ nome: '' });
+    if (this.vaga.posGraduacao[this.vaga.posGraduacao.length - 1].nome != "") {
+      this.vaga.posGraduacao.push({ nome: '' });
     }
   }
 
   superior() {
-    if (this.candidato.cursoSuperior[this.candidato.cursoSuperior.length - 1].nome != "") {
-      this.candidato.cursoSuperior.push({ nome: '' });
+    if (this.vaga.cursoSuperior[this.vaga.cursoSuperior.length - 1].nome != "") {
+      this.vaga.cursoSuperior.push({ nome: '' });
     }
   }
 
   idiomasF() {
-    if (this.candidato.idiomas[this.candidato.idiomas.length - 1].nome != "") {
-      this.candidato.idiomas.push({ nome: '' });
+    if (this.vaga.idiomas[this.vaga.idiomas.length - 1].nome != "") {
+      this.vaga.idiomas.push({ nome: '' });
     }
   }
 
   habilidades() {
-    if (this.candidato.habilidades[this.candidato.habilidades.length - 1].nome != "") {
-      this.candidato.habilidades.push({ nome: '' });
+    if (this.vaga.habilidades[this.vaga.habilidades.length - 1].nome != "") {
+      this.vaga.habilidades.push({ nome: '' });
     }
   }
 
-  certificacoes() {
-    if (this.candidato.certificacoes[this.candidato.certificacoes.length - 1].nome != "") {
-      this.candidato.certificacoes.push({ nome: '' });
+  certificacao() {
+    if (this.vaga.certificacoes[this.vaga.certificacoes.length - 1].nome != "") {
+      this.vaga.certificacoes.push({ nome: '' });
     }
+  }
+
+  adicionarVaga() {
+    this.navCtrl.push(PesosVagaPage, { vaga: this.vaga })
+    // this.fbService.cadastrarVaga(this.vaga).then(()=>{
+    //   this.mensagem("Vaga cadastrada");
+    // });
+  }
+
+  mensagem(message) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    });
+    toast.present();
   }
 
 }
