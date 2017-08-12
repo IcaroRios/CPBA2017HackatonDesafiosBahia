@@ -1,0 +1,49 @@
+page-ver-vaga {
+      ion-item {
+      background-color: transparent !important;
+      border-color: transparent !important;
+    }
+
+    .item-inner {
+      border-color: transparent;
+    }
+
+    ion-navbar {
+      h4 {
+        color: white;
+      }
+    }
+
+    h4 {
+      color: #95989A;
+    }
+
+    div>h4 {
+      padding: 0 20px;
+    }
+
+    ion-content {
+      background-color: #EAFFFF !important;
+    }
+
+    .vagas {
+      background-color: white;
+      margin: 0 10px;
+    }
+
+    h2 {
+      color: #0064AA !important;
+    }
+
+    .centralize {
+      text-align: center;
+      align-self: center;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .card-margin {
+    }
+}
