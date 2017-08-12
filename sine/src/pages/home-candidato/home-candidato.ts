@@ -7,6 +7,7 @@ import { LoginPage } from '../login/login';
 import { Vaga } from '../../model/vaga';
 import { VerVagaPage } from '../ver-vaga/ver-vaga';
 import { CandidatoAgendamentoPage } from '../candidato-agendamento/candidato-agendamento';
+import { ProcurarVagaPage } from '../procurar-vaga/procurar-vaga';
 
 /**
  * Generated class for the HomeCandidatoPage page.
@@ -24,7 +25,8 @@ export class HomeCandidatoPage {
   perfilPage = PerfilUsuarioPage;
   agendaPage = CandidatoAgendamentoPage;
   private usuario = undefined;
-  private empregos: Vaga[] = [];
+  private empregos = [];
+  procurarPage = ProcurarVagaPage;
 
   constructor(
     public navCtrl: NavController,
@@ -35,7 +37,6 @@ export class HomeCandidatoPage {
     this.nativeStorage.get('user').then(usuario => {
       if (usuario) {
         this.usuario = usuario;
-        console.log(this.usuario);
       } else {
         this.navCtrl.setRoot(LoginPage);
       }
@@ -59,19 +60,54 @@ export class HomeCandidatoPage {
 
   getVagas() {
     this.fbService.getVagasCandidato().subscribe(vaga => {
-      this.usuario.ocupacao.map(profissaoAtual => {
-        vaga.map(vagaAtual => {
-          this.calcularPeso(this.usuario, vagaAtual);
-          if (vagaAtual.ocupacao == profissaoAtual.nome) {
-            if (this.empregos.indexOf(vagaAtual) < 0) {
-              this.empregos.push(vagaAtual);
-            }
+      if (this.usuario.ocupacao) {
+
+        this.usuario.ocupacao.map(profissaoAtual => {
+          if (vaga) {
+            vaga.map(vagaAtual => {
+              // this.calcularPeso(this.usuario, vagaAtual);
+              if (vagaAtual.ocupacao == profissaoAtual.nome) {
+                if (this.empregos.indexOf(vagaAtual) < 0) {
+                  this.empregos.push(vagaAtual);
+                }
+              }
+            });
           }
         });
-      });
+      }
     });
   }
+  ordenar(){
+    let tamanho = this.empregos.length;
+    let maximo = 100;
+    let count = [maximo+1];
 
+    for (var index = 0; index < tamanho; ++index) {
+      count[this.empregos[index]] = count[this.empregos[index]]+1;     
+    }
+
+    for (var index = 0; index < tamanho; ++index ){
+      count[index] += count[index - 1];
+    }
+
+    let output = [maximo];
+    
+    for (var index = 0; index < tamanho; ++index ){
+      output[count[this.empregos[index]] -1 ] = this.empregos[index];
+      count[this.empregos[index]]--;
+    }
+    for (var index = 0; index < tamanho; ++index) {
+      this.empregos[index] = output[index];      
+    }
+    for (var index = 0; index < tamanho; index++) {
+      console.log(this.empregos[index].peso);
+      
+    }
+    //console.log(this.empregos[0].peso);
+    //console.log(this.empregos[1].peso);
+    //console.log(this.empregos[2].peso);
+
+  }
   abrirPage(page) {
     this.navCtrl.push(page);
   }
@@ -79,21 +115,22 @@ export class HomeCandidatoPage {
   calcularPeso(candidato, vaga) {
     let perdeu = "";
     vaga.peso = 100;
-    if ((+ vaga.pesoCertificacao) > 1) {
-      vaga.certificacoes.map(certificado => {
-        let existe = false;
-        candidato.certificacoes.map(certificadoC => {
-          if (certificado.nome == certificadoC.nome) {
-            existe = true;
+    if (vaga.certificacoes) {
+      if ((+ vaga.pesoCertificacao) > 1) {
+        vaga.certificacoes.map(certificado => {
+          let existe = false;
+          candidato.certificacoes.map(certificadoC => {
+            if (certificado.nome == certificadoC.nome) {
+              existe = true;
+            }
+          });
+          if (!existe) {
+            vaga.peso -= (+ vaga.pesoCertificacao);
+            perdeu += certificado.nome + ", "
           }
         });
-        if (!existe) {
-          vaga.peso -= (+ vaga.pesoCertificacao);
-          perdeu += certificado.nome + ", "
-        }
-      });
+      }
     }
-
     if ((+ vaga.pesoGenero) > 1) {
       if (vaga.genero != candidato.sexo) {
         vaga.peso -= (+ vaga.pesoGenero);
@@ -130,34 +167,40 @@ export class HomeCandidatoPage {
       }
     }
 
-    if ((+ vaga.pesoIdioma) > 1) {
-      vaga.idiomas.map(certificado => {
-        let existe = false;
-        candidato.idiomas.map(certificadoC => {
-          if (certificado.nome == certificadoC.nome) {
-            existe = true;
+    if (vaga.idiomas) {
+
+      if ((+ vaga.pesoIdioma) > 1) {
+        vaga.idiomas.map(certificado => {
+          let existe = false;
+          candidato.idiomas.map(certificadoC => {
+            if (certificado.nome == certificadoC.nome) {
+              existe = true;
+            }
+          });
+          if (!existe) {
+            vaga.peso -= (+ vaga.pesoIdioma);
+            perdeu += certificado.nome + ", "
           }
         });
-        if (!existe) {
-          vaga.peso -= (+ vaga.pesoIdioma);
-          perdeu += certificado.nome + ", "
-        }
-      });
+      }
     }
 
-    if ((+ vaga.pesoPos) > 1) {
-      vaga.posGraduacao.map(certificado => {
-        let existe = false;
-        candidato.posGraduacao.map(certificadoC => {
-          if (certificado.nome == certificadoC.nome) {
-            existe = true;
+    if (vaga.posGraduacao) {
+
+      if ((+ vaga.pesoPos) > 1) {
+        vaga.posGraduacao.map(certificado => {
+          let existe = false;
+          candidato.posGraduacao.map(certificadoC => {
+            if (certificado.nome == certificadoC.nome) {
+              existe = true;
+            }
+          });
+          if (!existe) {
+            perdeu += certificado.nome + ", "
+            vaga.peso -= (+ vaga.posGraduacao);
           }
         });
-        if (!existe) {
-          perdeu += certificado.nome + ", "
-          vaga.peso -= (+ vaga.posGraduacao);
-        }
-      });
+      }
     }
 
     if ((+ vaga.pesoSuperior) > 1) {
@@ -190,7 +233,6 @@ export class HomeCandidatoPage {
       });
     }
     console.log(vaga, perdeu);
-
   }
 
   abrirVaga(vaga) {

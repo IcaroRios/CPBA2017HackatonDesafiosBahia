@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { NavController, NavParams } from 'ionic-angular';
+import { FirebaseProvider } from '../../providers/firebase/firebase';
 /**
  * Generated class for the ProcurarVagaPage page.
  *
@@ -8,18 +8,47 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-procurar-vaga',
   templateUrl: 'procurar-vaga.html',
 })
 export class ProcurarVagaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private vagas = [];
+  private search = "";
+  private vagasAux = [];
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private fbService: FirebaseProvider
+  ) {
+    this.fbService.getVagasCandidato().subscribe(vagas => {
+      this.vagas = vagas;
+      this.initializeItems();
+    });
+  }
+
+  initializeItems() {
+    this.vagasAux = this.vagas;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProcurarVagaPage');
   }
+
+  getItems() {
+    // Reset items back to all of the items
+    // set val to the value of the searchbar
+
+    // if the value is an empty string don't filter the items
+    this.vagas = this.vagasAux.filter((item) => {
+      return (item.ocupacao.toLowerCase().indexOf(this.search.toLowerCase()) > -1);
+    })
+  }
+
+
+
+
 
 }
