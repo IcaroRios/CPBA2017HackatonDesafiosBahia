@@ -19,33 +19,18 @@
 
 
 <ion-content padding>
-  <div class="vagas">
+  <div class="vagas" *ngFor="let convite of convites">
     <ion-item>
-      <h2>José Almeida Junior</h2>
-      <h4>11/08/2017</h4>
-      <h4>Vaga: Analista</h4>
+      <h2>{{convite.usuarioNome}}</h2>
+      <h4>{{convite.data}}</h4>
+      <h4>Vaga: {{convite.vaga}}</h4>
       <ion-grid>
         <ion-row>
           <ion-col col-6>
-            <button color="azulbahia" ion-button>Convidar</button>
+            <button color="azulbahia" ion-button (click)="aceitar(convite)">Convidar</button>
           </ion-col>
           <ion-col col-6>
-            <button color="vermelhobahia" ion-button>Recusar</button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-    <ion-item>
-      <h2>José Almeida Junior</h2>
-      <h4>11/08/2017</h4>
-      <h4>Vaga: Analista</h4>
-      <ion-grid>
-        <ion-row>
-          <ion-col col-6>
-            <button color="azulbahia" ion-button>Convidar</button>
-          </ion-col>
-          <ion-col col-6>
-            <button color="vermelhobahia" ion-button>Recusar</button>
+            <button color="vermelhobahia" ion-button (click)="recusar(convite)">Recusar</button>
           </ion-col>
         </ion-row>
       </ion-grid>

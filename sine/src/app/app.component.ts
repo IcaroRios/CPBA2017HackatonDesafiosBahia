@@ -25,9 +25,8 @@ import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
 import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
 import { VerVagaPage } from './../pages/ver-vaga/ver-vaga';
 import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
+import { OneSignal } from '@ionic-native/onesignal';
 import { FeedbackPage } from './../pages/feedback/feedback';
-
-
 
 
 
@@ -43,8 +42,11 @@ export class MyApp {
     platform: Platform,
     statusBar: StatusBar,
     splashScreen: SplashScreen,
-    private nativeStorage: NativeStorageProvider
+    private nativeStorage: NativeStorageProvider,
+    private oneSignal: OneSignal
   ) {
+
+
     // this.nativeStorage.get("user").then(response => {
     //   if (response) {
     //     this.nav.setRoot(EmpresaHomePage);
@@ -53,6 +55,14 @@ export class MyApp {
     //   }
     // }).catch(()=>this.nav.setRoot(NovaVagaPage));
     platform.ready().then(() => {
+
+      var notificationOpenedCallback = function (jsonData) {
+        alert(JSON.stringify(jsonData));
+      };
+
+      this.oneSignal.startInit("3798198d-14e6-48c8-8f76-8106bc5c1856")
+        .handleNotificationOpened(notificationOpenedCallback)
+        .endInit();
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
