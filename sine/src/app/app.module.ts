@@ -1,14 +1,16 @@
 
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import {HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
@@ -21,9 +23,13 @@ import { EmpresaHomePage } from './../pages/empresa-home/empresa-home';
 import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
 import { LoginPage } from './../pages/login/login';
 import { EmpresaVagasPage } from './../pages/empresa-vagas/empresa-vagas';
+import { NativeStorageProvider } from '../providers/native-storage/native-storage';
 import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-agendamento';
 import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
 import { NovaVagaPage } from './../pages/nova-vaga/nova-vaga';
+import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
+import { CompetenciasPage } from './../pages/competencias/competencias';
+
 
 
 const firebaseConfig = {
@@ -49,14 +55,17 @@ const firebaseConfig = {
     EmpresaVagasPage,
     EmpresaAgendamentoPage,
     EmpresaPedidosPage,
-    NovaVagaPage
+    NovaVagaPage,
+    CompetenciasPage,
+    CertificacoesPage
   ],
   imports: [
     HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -72,14 +81,17 @@ const firebaseConfig = {
     EmpresaVagasPage,
     EmpresaAgendamentoPage,
     EmpresaPedidosPage,
-    NovaVagaPage
+    NovaVagaPage,
+    CompetenciasPage,
+    CertificacoesPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FirebaseProvider,
-    CripSenhaProvider
+    CripSenhaProvider,
+    NativeStorageProvider
   ]
 })
 export class AppModule { }
