@@ -1,3 +1,4 @@
+import { PreCadastroPage } from './../pre-cadastro/pre-cadastro';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
@@ -63,6 +64,9 @@ export class LoginPage {
         }
       }
     });
+  }
+  cadastrar(){
+    this.navCtrl.push(PreCadastroPage);
   }
 
   mensagem(message) {

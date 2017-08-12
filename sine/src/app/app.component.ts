@@ -19,13 +19,15 @@ import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
 import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { HomePage } from '../pages/home/home';
 import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
+import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
+
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = ProcurarVagaPage;
+  rootPage: any = DadosUsuarioPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 

@@ -52,6 +52,7 @@ export class Candidato {
     public economiaSolidaria: string = "";
     public bolsaFamilia: string = "";
     public gestorPoliticaPublica: string="";
+    public cargoAtuacao: String="";
 
     constructor() {
 
