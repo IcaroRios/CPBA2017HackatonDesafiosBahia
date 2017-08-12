@@ -13,7 +13,7 @@
   <hr>
   <ion-item>
     <ion-label color="azulbahia">Escolaridade</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="competencias.escolaridade">
       <ion-option value="d">Pós-graduação completa</ion-option>
       <ion-option value="d">Pós-graduação incompleta</ion-option>
       <ion-option value="a">Superior completo</ion-option>
@@ -26,18 +26,8 @@
   </ion-item>
 
   <ion-item>
-    <ion-label color="azulbahia">Tipo de Formação</ion-label>
-    <ion-select>
-      <ion-option value="m">Profissionalizante</ion-option>
-      <ion-option value="f">Regular</ion-option>
-      <ion-option value="f">Supletivo</ion-option>
-      <ion-option value="f">Nenhum</ion-option>
-    </ion-select>
-  </ion-item>
-
-  <ion-item>
     <ion-label color="azulbahia">Estudante</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="competencias.estudante">
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -45,28 +35,28 @@
 
   <ion-item>
     <ion-label color="azulbahia">Curso Tecnico (separado por ",")</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="competencias.cursoTecnico"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Curso Superior (separado por ",")</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="competencias.cursoSuperior"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Pós-graduação (separado por ",")</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="competencias.posGraduacao"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Idiomas (separado por ",")</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="competencias.idiomas"></ion-input>
   </ion-item>
 
   <p>Habilidades</p>
   <hr>
   <ion-item>
     <ion-label color="azulbahia" floating>Habilidades (separados por ",")</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="competencias.habilidades"></ion-input>
   </ion-item>
 
 </ion-content>
