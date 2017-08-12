@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="azulbahia">
-    <div (click)="abrirPage(perfilPage)" *ngIf="usuario">
+    <div *ngIf="usuario">
       <ion-avatar item-start>
         <img src="imagens/boy.png">
       </ion-avatar>
@@ -24,19 +24,6 @@
 
 
 <ion-content padding>
-
-  <ion-card class="card-margin">
-    <ion-grid>
-      <ion-row>
-        <ion-col col-4>
-          <img src="imagens/research.png">
-        </ion-col>
-        <ion-col col-8 class="centralize">
-          <h2 class="centralize">Procurar Candidatos</h2>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-card>
 
   <ion-card class="card-margin" (click)="abrirPage(agendamentoPage)">
     <ion-grid>

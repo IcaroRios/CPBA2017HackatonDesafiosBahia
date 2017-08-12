@@ -4,6 +4,7 @@ import { NativeStorageProvider } from '../../providers/native-storage/native-sto
 import { LoginPage } from '../login/login';
 import { EmpresaAgendamentoPage } from '../empresa-agendamento/empresa-agendamento';
 import { EmpresaVagasPage } from '../empresa-vagas/empresa-vagas';
+
 /**
  * Generated class for the EmpresaHomePage page.
  *

@@ -33,7 +33,7 @@ import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = HomeCandidatoPage;
+  rootPage: any = LoginPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 

@@ -38,12 +38,25 @@ export class FirebaseProvider {
     return this.afdb.list('/candidatos/').push(candidato);
   }
 
+  cadastrarConvite(convite) {
+    return this.afdb.list('/convites/').push(convite);
+  }
+
   agendar(agendamento) {
     return this.afdb.list('/agendamentos/').push(agendamento);
   }
 
   cadastrarEmpresa(empresa) {
     return this.afdb.list('/empresas/').push(empresa);
+  }
+
+  getConviteEmpresa(key) {
+    return this.afdb.list('/convites/', {
+      query: {
+        orderByChild: 'empresaKey',
+        equalTo: key
+      }
+    });
   }
 
   cadastrarVaga(vaga) {
@@ -98,10 +111,18 @@ export class FirebaseProvider {
   }
 
   getAgendamentosEmpresa(key) {
-    console.log(key);
     return this.afdb.list('/agendamentos/', {
       query: {
         orderByChild: 'empresa',
+        equalTo: key
+      }
+    });
+  }
+
+  getAgendamentosCandidato(key) {
+    return this.afdb.list('/agendamentos/', {
+      query: {
+        orderByChild: 'usuario',
         equalTo: key
       }
     });

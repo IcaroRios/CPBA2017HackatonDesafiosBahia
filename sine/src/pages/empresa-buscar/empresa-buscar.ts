@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 import { Vaga } from '../../model/vaga';
+import { Agendamento } from '../../model/agendamento';
 import { Candidato } from '../../model/candidato';
+import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
 /**
  * Generated class for the EmpresaBuscarPage page.
  *
@@ -18,14 +20,17 @@ export class EmpresaBuscarPage {
 
   private vaga: Vaga;
   private candidatos = [];
+  private usuario;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private fbProvider: FirebaseProvider
+    private fbProvider: FirebaseProvider,
+    private native: NativeStorageProvider,
+    public alertCtrl: AlertController,
+    private toastCtrl: ToastController
   ) {
     this.vaga = this.navParams.get('vaga');
-    console.log(this.vaga);
     this.fbProvider.getCandidatos().subscribe(candidatos => {
       candidatos.map(candidato => {
         candidato.ocupacao.map(ocupacao => {
@@ -35,7 +40,10 @@ export class EmpresaBuscarPage {
           }
         });
       });
-      console.log(this.candidatos);
+    });
+
+    this.native.get('user').then(usuario => {
+      this.usuario = usuario;
     });
   }
 
@@ -43,8 +51,59 @@ export class EmpresaBuscarPage {
     console.log('ionViewDidLoad EmpresaBuscarPage');
   }
 
-  convidar(candidato) {
+   mensagem(message) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    });
+    toast.present();
+  }
 
+  convidar(candidato, dados) {
+    console.log(dados);
+    let convite = new Agendamento();
+    convite.data = dados.data;
+    convite.local = dados.local;
+    convite.empresaNome = this.usuario.nome;
+    convite.empresa = this.usuario.key;
+    convite.usuario = candidato.$key;
+    convite.usuarioNome = candidato.nome;
+    convite.vaga = this.vaga.ocupacao;
+    this.fbProvider.agendar(convite).then(() => {
+      this.mensagem("Agendamento feito com sucesso!")
+    });
+  }
+
+  alertData(candidato) {
+    let prompt = this.alertCtrl.create({
+      title: 'Convite',
+      message: "Informe a data e o local",
+      inputs: [
+        {
+          name: 'data',
+          placeholder: 'Data'
+        },
+        {
+          name: 'local',
+          placeholder: 'Local'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            this.convidar(candidato, data);
+          }
+        }
+      ]
+    });
+    prompt.present();
   }
 
   calcularPeso(candidato: Candidato) {
