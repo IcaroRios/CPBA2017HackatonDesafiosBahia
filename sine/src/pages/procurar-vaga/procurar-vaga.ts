@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { VerVagaPage } from '../ver-vaga/ver-vaga';
 /**
  * Generated class for the ProcurarVagaPage page.
  *
@@ -47,6 +48,9 @@ export class ProcurarVagaPage {
     })
   }
 
+  abrirVaga(vaga) {
+    this.navCtrl.push(VerVagaPage, { vaga: vaga })
+  }
 
 
 
