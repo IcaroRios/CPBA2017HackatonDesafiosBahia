@@ -83,7 +83,7 @@ export class FirebaseProvider {
   getVagasCandidato() {
     return this.afdb.list('/vagas/', {
       query: {
-        orderByChild: 'data'
+        orderByChild: 'ocupacao'
       }
     });
   }
