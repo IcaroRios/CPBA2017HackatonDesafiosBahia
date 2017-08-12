@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { NavController, NavParams } from 'ionic-angular';
+import { FirebaseProvider } from '../../providers/firebase/firebase';
+import { Vaga } from '../../model/vaga';
+import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
 /**
  * Generated class for the EmpresaVagasPage page.
  *
@@ -8,14 +10,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-empresa-vagas',
   templateUrl: 'empresa-vagas.html',
 })
 export class EmpresaVagasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private vagas: Vaga[] = [];
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private fbService: FirebaseProvider,
+    private nativeStorage: NativeStorageProvider
+  ) {
+    this.nativeStorage.get('user').then(usuario => {
+      this.fbService.getEmpresa().subscribe(empresa => {
+        empresa.map(empresaAtual => {
+          if (empresaAtual.$key == usuario.key) {
+            this.vagas = empresaAtual.vagas;
+            console.log(this.vagas);
+          }
+        });
+      });
+    });
   }
 
   ionViewDidLoad() {

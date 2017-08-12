@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
 import { LoginPage } from '../login/login';
 import { EmpresaAgendamentoPage } from '../empresa-agendamento/empresa-agendamento';
+import { EmpresaVagasPage } from '../empresa-vagas/empresa-vagas';
 /**
  * Generated class for the EmpresaHomePage page.
  *
@@ -18,6 +19,7 @@ export class EmpresaHomePage {
 
   private usuario = undefined;
   agendamentoPage = EmpresaAgendamentoPage;
+  vagasPage = EmpresaVagasPage;
 
   constructor(
     public navCtrl: NavController,

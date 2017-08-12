@@ -16,13 +16,18 @@ import { NovaVagaPage } from './../pages/nova-vaga/nova-vaga';
 import { NativeStorageProvider } from './../providers/native-storage/native-storage';
 import { CompetenciasPage } from './../pages/competencias/competencias';
 import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
-
+import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { HomePage } from '../pages/home/home';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage:any = DadosUsuarioPage;
+=======
+  rootPage: any = ExperienciaPage;
+>>>>>>> c82106d3aea1e3ca92888ff390339615b7114ac7
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 

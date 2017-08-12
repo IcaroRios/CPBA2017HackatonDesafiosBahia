@@ -20,14 +20,9 @@
 
 <ion-content padding>
   <div class="vagas">
-    <ion-item>
-      <h2>Analista de sistemas (2 vagas)</h2>
-      <h4>11/08/2017</h4>
-      <button color="azulbahia" ion-button>Buscar Candidatos</button>
-    </ion-item>
-    <ion-item>
-      <h2>Analista de sistemas (2 vagas)</h2>
-      <h4>11/08/2017</h4>
+    <ion-item *ngFor="let vaga of vagas">
+      <h2>{{vaga.vaga}} ({{vaga.quantidade}} vagas)</h2>
+      <h4>{{vaga.dataShow}}</h4>
       <button color="azulbahia" ion-button>Buscar Candidatos</button>
     </ion-item>
   </div>

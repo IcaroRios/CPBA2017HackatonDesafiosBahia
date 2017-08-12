@@ -1,24 +1,25 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the CertificacoesPage page.
+ * Generated class for the ExperienciaPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 
+@IonicPage()
 @Component({
-  selector: 'page-certificacoes',
-  templateUrl: 'certificacoes.html',
+  selector: 'page-experiencia',
+  templateUrl: 'experiencia.html',
 })
-export class CertificacoesPage {
+export class ExperienciaPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CertificacoesPage');
+    console.log('ionViewDidLoad ExperienciaPage');
   }
 
 }
