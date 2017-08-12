@@ -1,3 +1,4 @@
+import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
 
 
 
@@ -61,7 +62,8 @@ const firebaseConfig = {
     CompetenciasPage,
     CertificacoesPage,
     ExperienciaPage,
-    CandidatoAgendamentoPage
+    CandidatoAgendamentoPage,
+    ProcurarVagaPage
   ],
   imports: [
     HttpModule,
@@ -89,7 +91,9 @@ const firebaseConfig = {
     CompetenciasPage,
     CertificacoesPage,
     ExperienciaPage,
-    CandidatoAgendamentoPage
+    CandidatoAgendamentoPage,
+    ProcurarVagaPage
+    
   ],
   providers: [
     StatusBar,

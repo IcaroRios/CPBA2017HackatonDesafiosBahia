@@ -91,4 +91,9 @@ export class FirebaseProvider {
     });
   }
 
+  updateCandidato(key, candidato){
+    console.log(key);
+    return this.afdb.list('/candidatos/').update(key, candidato);
+  }
+
 }
