@@ -23,11 +23,12 @@ import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
 import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
 
 
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = EmpresaHomePage;
+  rootPage: any = ExperienciaPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 

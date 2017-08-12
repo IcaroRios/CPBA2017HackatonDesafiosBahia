@@ -39,32 +39,32 @@
   <ion-item>
     <ion-label color="azulbahia">Gênero</ion-label>
     <ion-select [(ngModel)]="candidato.sexo">
-      <ion-option value="m">Masculino</ion-option>
-      <ion-option value="f">Feminio</ion-option>
+      <ion-option value="Masculino">Masculino</ion-option>
+      <ion-option value="Feminio">Feminio</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Raça/cor</ion-label>
     <ion-select [(ngModel)]="candidato.raca">
-      <ion-option value="b">Branca</ion-option>
-      <ion-option value="a">Amarela</ion-option>
-      <ion-option value="n">Negra</ion-option>
-      <ion-option value="p">Parda</ion-option>
-      <ion-option value="i">Indígena</ion-option>
-      <ion-option value="n">Não declarar</ion-option>
+      <ion-option value="Branca">Branca</ion-option>
+      <ion-option value="Amarela">Amarela</ion-option>
+      <ion-option value="Negra">Negra</ion-option>
+      <ion-option value="Parda">Parda</ion-option>
+      <ion-option value="Indígena">Indígena</ion-option>
+      <ion-option value="Não declarada">Não declarar</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Estado Civil</ion-label>
     <ion-select [(ngModel)]="candidato.estadoCivil">
-      <ion-option value="s">Solteiro</ion-option>
-      <ion-option value="c">Casado</ion-option>
-      <ion-option value="d">Divorciado</ion-option>
-      <ion-option value="s">Separado</ion-option>
-      <ion-option value="u">União Estável</ion-option>
-      <ion-option value="n">Não declarar</ion-option>
+      <ion-option value="Solteiro">Solteiro</ion-option>
+      <ion-option value="Casado">Casado</ion-option>
+      <ion-option value="Divorciado">Divorciado</ion-option>
+      <ion-option value="Separado">Separado</ion-option>
+      <ion-option value="União Estável">União Estável</ion-option>
+      <ion-option value="Não declarar">Não declarar</ion-option>
     </ion-select>
   </ion-item>
 
@@ -81,8 +81,8 @@
   <ion-item>
     <ion-label color="azulbahia">Naturalizado</ion-label>
     <ion-select [(ngModel)]="candidato.naturalizado">
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
 
@@ -94,18 +94,18 @@
   <ion-item>
     <ion-label color="azulbahia">Portador de deficiência</ion-label>
     <ion-select [(ngModel)]="candidato.portadorDeficiencia">
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
   <!-- só exibir se houver deficiencia utilizar "if" -->
   <ion-item>
     <ion-label color="azulbahia">Deficiência</ion-label>
     <ion-select [(ngModel)]="candidato.deficiencia">
-      <ion-option value="f">Física</ion-option>
-      <ion-option value="v">Visual</ion-option>
-      <ion-option value="a">Auditiva</ion-option>
-      <ion-option value="m">Mental/Intelectual</ion-option>
+      <ion-option value="Física">Física</ion-option>
+      <ion-option value="Visual">Visual</ion-option>
+      <ion-option value="Auditiva">Auditiva</ion-option>
+      <ion-option value="Mental/Intelectual">Mental/Intelectual</ion-option>
     </ion-select>
   </ion-item>
 
@@ -156,10 +156,10 @@
   <ion-item>
     <ion-label color="azulbahia">Zona de Moradia</ion-label>
     <ion-select [(ngModel)]="candidato.zonaMoradia">
-      <ion-option value="f">Urbana</ion-option>
-      <ion-option value="v">Rural</ion-option>
-      <ion-option value="a">Quilombola</ion-option>
-      <ion-option value="m">Comunidade</ion-option>
+      <ion-option value="Urbana">Urbana</ion-option>
+      <ion-option value="Rural">Rural</ion-option>
+      <ion-option value="Quilombola">Quilombola</ion-option>
+      <ion-option value="Comunidade">Comunidade</ion-option>
     </ion-select>
   </ion-item>
 
@@ -212,9 +212,9 @@
   <ion-item>
     <ion-label color="azulbahia">Papel na Família</ion-label>
     <ion-select [(ngModel)]="candidato.papelFamilia">
-      <ion-option value="chegfe">Chefe de família</ion-option>
-      <ion-option value="compoe">Compõe a Renda</ion-option>
-      <ion-option value="depende">Dependente</ion-option>
+      <ion-option value="Chefe de família">Chefe de família</ion-option>
+      <ion-option value="Compõe a Renda">Compõe a Renda</ion-option>
+      <ion-option value="Dependente">Dependente</ion-option>
     </ion-select>
   </ion-item>
 
@@ -241,8 +241,8 @@
   <ion-item>
     <ion-label color="azulbahia">Habilitado</ion-label>
     <ion-select  [(ngModel)]="candidato.habilitado">
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
 
@@ -254,8 +254,8 @@
   <ion-item>
     <ion-label color="azulbahia">Veículo para Trabalho</ion-label>
     <ion-select [(ngModel)]="candidato.veiculo" >
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
 
@@ -264,7 +264,7 @@
     <ion-select [(ngModel)]="candidato.tipoVeiculo" >
       <ion-option value="carro">Carro</ion-option>
       <ion-option value="moto">Moto</ion-option>
-      <ion-option value="caminhao">Caminhão</ion-option>
+      <ion-option value="caminhão">Caminhão</ion-option>
       <ion-option value="trator">Trator</ion-option>
     </ion-select>
   </ion-item>
@@ -272,24 +272,24 @@
   <ion-item>
     <ion-label color="azulbahia">Disponível para viagem</ion-label>
     <ion-select [(ngModel)]="candidato.disponivelViagem">
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Disponível para morar no local de trabalho</ion-label>
     <ion-select [(ngModel)]="candidato.disponivelMorarLocalTrabalho">
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="SIm">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Disponível para ausentar por longo período</ion-label>
     <ion-select [(ngModel)]="candidato.disponivelAusentar">
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
 
@@ -301,44 +301,44 @@
   <ion-item>
     <ion-label color="azulbahia">Programa do governo que participa</ion-label>
     <ion-select [(ngModel)]="candidato.programaGovernoParticipa" >
-      <ion-option value="s">Nenhum</ion-option>
-      <ion-option value="n">PROgER</ion-option>
-      <ion-option value="n">PRONAF</ion-option>
-      <ion-option value="n">Outros - FAT</ion-option>
-      <ion-option value="n">Outros - não FAT</ion-option>
+      <ion-option value="Nenhum">Nenhum</ion-option>
+      <ion-option value="PROgER">PROgER</ion-option>
+      <ion-option value="PRONAF">PRONAF</ion-option>
+      <ion-option value="Outros - FAT">Outros - FAT</ion-option>
+      <ion-option value="Outros - não FAT">Outros - não FAT</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Risco de Desemprego</ion-label>
     <ion-select [(ngModel)]="candidato.riscoDesemprego" >
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Beneficiário prog. Economia Solidária</ion-label>
     <ion-select [(ngModel)]="candidato.economiaSolidaria" >
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Beneficiário prog. Bolsa Família</ion-label>
     <ion-select [(ngModel)]="candidato.bolsaFamilia">
-      <ion-option value="s">Sim</ion-option>
-      <ion-option value="n">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Gestor de política pública</ion-label>
     <ion-select [(ngModel)]="candidato.gestorPoliticaPublica">
-      <ion-option value="s">Nenhum</ion-option>
-      <ion-option value="n">Comissão/Conselho de Trabalho</ion-option>
-      <ion-option value="n">Fórum de políticas publicas de emprego</ion-option>
+      <ion-option value="Nenhum">Nenhum</ion-option>
+      <ion-option value="Comissão/Conselho de Trabalho">Comissão/Conselho de Trabalho</ion-option>
+      <ion-option value="Fórum de políticas publicas de emprego">Fórum de políticas publicas de emprego</ion-option>
     </ion-select>
   </ion-item>
 

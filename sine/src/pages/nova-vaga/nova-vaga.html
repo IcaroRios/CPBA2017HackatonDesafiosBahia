@@ -51,14 +51,14 @@
   <ion-item>
     <ion-label color="azulbahia">Escolaridade</ion-label>
     <ion-select [(ngModel)]="vaga.escolaridade">
-      <ion-option value="d">Pós-graduação completa</ion-option>
-      <ion-option value="d">Pós-graduação incompleta</ion-option>
-      <ion-option value="a">Superior completo</ion-option>
-      <ion-option value="a">Superior incompleto</ion-option>
-      <ion-option value="b">Ensino médio completo</ion-option>
-      <ion-option value="b">Ensino médio incompleto</ion-option>
-      <ion-option value="c">Técnico/Profissionalizante completo</ion-option>
-      <ion-option value="c">Técnico/Profissionalizante incompleto</ion-option>
+      <ion-option value="Pós-graduação completa">Pós-graduação completa</ion-option>
+      <ion-option value="Pós-graduação incompleta">Pós-graduação incompleta</ion-option>
+      <ion-option value="Superior completo">Superior completo</ion-option>
+      <ion-option value="Superior incompleto">Superior incompleto</ion-option>
+      <ion-option value="Ensino médio completo">Ensino médio completo</ion-option>
+      <ion-option value="Ensino médio incompleto">Ensino médio incompleto</ion-option>
+      <ion-option value="Técnico/Profissionalizante completo">Técnico/Profissionalizante completo</ion-option>
+      <ion-option value="Técnico/Profissionalizante incompleto">Técnico/Profissionalizante incompleto</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
@@ -68,8 +68,8 @@
   <ion-item>
     <ion-label color="azulbahia">Gênero</ion-label>
     <ion-select [(ngModel)]="vaga.genero">
-      <ion-option value="m">Masculino</ion-option>
-      <ion-option value="f">Feminio</ion-option>
+      <ion-option value="Masculino">Masculino</ion-option>
+      <ion-option value="Feminino">Feminio</ion-option>
     </ion-select>
   </ion-item>
   <p>Faixa etária</p>
@@ -84,54 +84,54 @@
   <ion-item>
     <ion-label color="azulbahia">Aceita deficiente</ion-label>
     <ion-select [(ngModel)]="vaga.deficiente">
-      <ion-option value="d">Sim</ion-option>
-      <ion-option value="c">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Tipo da deficiência</ion-label>
     <ion-select [(ngModel)]="vaga.tipoDeficiencia">
-      <ion-option value="d">Física</ion-option>
-      <ion-option value="c">Auditiva</ion-option>
-      <ion-option value="e">Mental/Intelectual</ion-option>
-      <ion-option value="f">Visual</ion-option>
+      <ion-option value="Física">Física</ion-option>
+      <ion-option value="Auditiva">Auditiva</ion-option>
+      <ion-option value="Mental/Intelectual">Mental/Intelectual</ion-option>
+      <ion-option value="Visual">Visual</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Carteira de habilitação</ion-label>
     <ion-select [(ngModel)]="vaga.habilitacao">
-      <ion-option value="d">Sim</ion-option>
-      <ion-option value="c">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia" floating>Tipo de veículo</ion-label>
     <ion-select [(ngModel)]="vaga.veiculo">
-      <ion-option value="carro">Carro</ion-option>
-      <ion-option value="moto">Moto</ion-option>
-      <ion-option value="caminhao">Caminhão</ion-option>
-      <ion-option value="trator">Trator</ion-option>
+      <ion-option value="Carro">Carro</ion-option>
+      <ion-option value="Moto">Moto</ion-option>
+      <ion-option value="Caminhão">Caminhão</ion-option>
+      <ion-option value="Trator">Trator</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Disponibilidade de realizar viagem</ion-label>
     <ion-select [(ngModel)]="vaga.viajar">
-      <ion-option value="d">Sim</ion-option>
-      <ion-option value="c">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Disponibilidade para dormir no local de trabalho</ion-label>
     <ion-select [(ngModel)]="vaga.dormir">
-      <ion-option value="d">Sim</ion-option>
-      <ion-option value="c">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Disponibilidade para se ausentar do domicílio por longo período</ion-label>
     <ion-select [(ngModel)]="vaga.ausentarDomicilio">
-      <ion-option value="d">Sim</ion-option>
-      <ion-option value="c">Não</ion-option>
+      <ion-option value="Sim">Sim</ion-option>
+      <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
   <hr>
@@ -144,11 +144,11 @@
   <ion-item>
     <ion-label color="azulbahia">Periodicidade do pagamento</ion-label>
     <ion-select [(ngModel)]="vaga.pagamento">
-      <ion-option value="d">Hora</ion-option>
-      <ion-option value="c">Dia</ion-option>
-      <ion-option value="ce">Semana</ion-option>
-      <ion-option value="ced">Quinzena</ion-option>
-      <ion-option value="cedd">Mês</ion-option>
+      <ion-option value="Hora">Hora</ion-option>
+      <ion-option value="Dia">Dia</ion-option>
+      <ion-option value="Semana">Semana</ion-option>
+      <ion-option value="Quinzena">Quinzena</ion-option>
+      <ion-option value="Mês">Mês</ion-option>
     </ion-select>
   </ion-item>
   <hr>
@@ -157,18 +157,18 @@
   <ion-item>
     <ion-label color="azulbahia">Horário de trabalho</ion-label>
     <ion-select [(ngModel)]="vaga.turno">
-      <ion-option value="d">Manhã</ion-option>
-      <ion-option value="c">Tarde</ion-option>
-      <ion-option value="ce">Noite</ion-option>
-      <ion-option value="ced">Madrugada</ion-option>
+      <ion-option value="Manhã">Manhã</ion-option>
+      <ion-option value="Tarde">Tarde</ion-option>
+      <ion-option value="Noite">Noite</ion-option>
+      <ion-option value="Madrugada">Madrugada</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Local de trabalho</ion-label>
     <ion-select [(ngModel)]="vaga.local">
-      <ion-option value="d">Mesmo local da empresa</ion-option>
-      <ion-option value="c">Outro</ion-option>
-      <ion-option value="ce">Local não-fixo</ion-option>
+      <ion-option value="Mesmo local da empresa">Mesmo local da empresa</ion-option>
+      <ion-option value="Outro">Outro</ion-option>
+      <ion-option value="Local não-fixo">Local não-fixo</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
