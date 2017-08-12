@@ -10,7 +10,6 @@ export class Vaga {
     public descricao = "";
     public mesesProfissional = "";
     public escolaridade = "";
-    public idiomas = "";
     public genero = "";
     public inicial = "";
     public final = "";
@@ -34,7 +33,24 @@ export class Vaga {
     public estado = "";
     public telefonePrincipal = "";
     public telefoneSecundario = "";
+    public cursoTecnico = [{nome:''}];
+    public cursoSuperior = [{nome:''}];
+    public posGraduacao = [{nome:''}];
+    public idiomas = [{nome:''}];
+    public habilidades = [{nome:''}];
+    public certificacoes = [{ nome: '' }];
 
+    //pesos
+    public pesoGenero = "1";
+    public pesoTecnico = "1";
+    public pesoSuperior = "1";
+    public pesoPos = "1";
+    public pesoHabilidade = "1";
+    public pesoCertificacao = "1";
+    public pesoIdioma = "1";
+    public pesoIdade = "1";
+    public pesoLocalizacao = "1";
+    public pesoHabilitacao = "1";
 
 
 

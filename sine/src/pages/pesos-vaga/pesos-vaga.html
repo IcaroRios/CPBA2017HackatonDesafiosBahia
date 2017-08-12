@@ -21,7 +21,7 @@
   <p>Defina um valor de 0 (pouco relevante) à 5 (muito relevante) para as caracteristivas abaixo</p>
   <ion-item>
     <ion-label color="azulbahia">Gênero</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoGenero">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -31,7 +31,7 @@
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Curso Tecnico</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoTecnico">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -41,7 +41,7 @@
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Curso Superior</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoSuperior">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -51,7 +51,7 @@
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Pós-graduação</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoPos">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -61,7 +61,7 @@
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Habilidades</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoHabilidade">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -71,7 +71,7 @@
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Certificações</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoCertificacao">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -81,7 +81,7 @@
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Idiomas</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoIdioma">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -91,7 +91,7 @@
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Faixa Etária</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoIdade">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -101,7 +101,7 @@
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Habilitação</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoHabilitacao">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -111,7 +111,7 @@
   </ion-item>
   <ion-item>
     <ion-label color="azulbahia">Localização</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="vaga.pesoLocalizacao">
       <ion-option value="1">1</ion-option>
       <ion-option value="2">2</ion-option>
       <ion-option value="3">3</ion-option>
@@ -119,4 +119,12 @@
       <ion-option value="5">5</ion-option>
     </ion-select>
   </ion-item>
+
+   <ion-grid class="margintop30">
+    <ion-row>
+      <ion-col col-4 offset-8>
+        <button color="azulbahia" ion-button (click)="adicionarVaga()">Cadastrar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

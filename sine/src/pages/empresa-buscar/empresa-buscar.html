@@ -23,7 +23,7 @@
     <ion-item *ngFor="let candidato of candidatos">
       <h2>{{candidato.nome}}</h2>
       <h4>{{candidato.dataNascimento}}</h4>
-      <h4>Compatibilidade: 83%</h4>
+      <h4>Compatibilidade: {{candidato.peso}}%</h4>
       <ion-grid>
         <ion-row>
           <ion-col col-6>

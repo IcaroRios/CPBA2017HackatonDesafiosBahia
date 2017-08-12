@@ -69,32 +69,32 @@
     </ion-select>
   </ion-item>
 
-  <ion-item *ngFor="let cursoTecnico of candidato.cursoTecnico">
+  <ion-item *ngFor="let cursoTecnico of vaga.cursoTecnico">
     <ion-label color="azulbahia" floating>Curso Tecnico</ion-label>
     <ion-input type="text" [(ngModel)]="cursoTecnico.nome" (keyup)="tecnico()"></ion-input>
   </ion-item>
 
-  <ion-item *ngFor="let cursoSuperior of candidato.cursoSuperior">
+  <ion-item *ngFor="let cursoSuperior of vaga.cursoSuperior">
     <ion-label color="azulbahia" floating>Curso Superior</ion-label>
     <ion-input type="text" [(ngModel)]="cursoSuperior.nome" (keyup)="superior()"></ion-input>
   </ion-item>
 
-  <ion-item *ngFor="let posGraduacao of candidato.posGraduacao">
+  <ion-item *ngFor="let posGraduacao of vaga.posGraduacao">
     <ion-label color="azulbahia" floating>Pós-graduação</ion-label>
     <ion-input type="text" [(ngModel)]="posGraduacao.nome" (keyup)="graduacao()"></ion-input>
   </ion-item>
 
-  <ion-item *ngFor="let habilidade of candidato.habilidades">
+  <ion-item *ngFor="let habilidade of vaga.habilidades">
     <ion-label color="azulbahia" floating>Habilidades</ion-label>
     <ion-input type="text" [(ngModel)]="habilidade.nome" (keyup)="habilidades()"></ion-input>
   </ion-item>
 
-  <ion-item *ngFor="let certificacoes of candidato.certificacoes">
+  <ion-item *ngFor="let certificacoes of vaga.certificacoes">
   <ion-label color="azulbahia" floating>Certificações</ion-label>
   <ion-input type="text" [(ngModel)]="certificacoes.nome" (keyup)="certificacao()"></ion-input>
   </ion-item>
 
-  <ion-item *ngFor="let idiomas of candidato.idiomas">
+  <ion-item *ngFor="let idiomas of vaga.idiomas">
     <ion-label color="azulbahia" floating>Idiomas</ion-label>
     <ion-input type="text" [(ngModel)]="idiomas.nome" (keyup)="idiomasF()"></ion-input>
   </ion-item>
