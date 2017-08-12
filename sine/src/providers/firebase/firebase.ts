@@ -54,6 +54,10 @@ export class FirebaseProvider {
     return this.afdb.list('/empresas/');
   }
 
+   getCandidatos() {
+    return this.afdb.list('/candidatos/');
+  }
+
   getVagasEmpresa(key) {
     return this.afdb.list('/vagas/', {
       query: {

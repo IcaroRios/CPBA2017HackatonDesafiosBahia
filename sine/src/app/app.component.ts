@@ -30,11 +30,7 @@ import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
-  rootPage: any = ExperienciaPage;
-=======
-  rootPage: any = CompetenciasPage;
->>>>>>> 31592aaaff3a679ea4480723c84a9a1c497904ee
+  rootPage: any = EmpresaHomePage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
@@ -51,12 +47,12 @@ export class MyApp {
     //     this.nav.setRoot(NovaVagaPage);
     //   }
     // }).catch(()=>this.nav.setRoot(NovaVagaPage));
-      platform.ready().then(() => {
-        // Okay, so the platform is ready and our plugins are available.
-        // Here you can do any higher level native things you might need.
-        statusBar.styleDefault();
-        splashScreen.hide();
-      });
+    platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      statusBar.styleDefault();
+      splashScreen.hide();
+    });
   }
 }
 
