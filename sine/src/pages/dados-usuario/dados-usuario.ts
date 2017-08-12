@@ -41,7 +41,9 @@ export class DadosUsuarioPage {
     console.log('ionViewDidLoad DadosUsuarioPage');
   }
   salvarInformacoes() {
-
+    if(!this.validarCPF() ){
+      this.mensagem("CPF inválido");
+    }
   }
 
   validarCPF() {
@@ -61,9 +63,9 @@ export class DadosUsuarioPage {
     penultimoDigito = penultimoDigito % 11;
     ultimoDigito = ultimoDigito % 11;
     if (penultimoDigito.toString() == numero[numero.length - 2] && ultimoDigito.toString() == numero[numero.length - 1])
-      console.log("CPF válido");
+      return true;
     else
-      console.log("CPF incorreto");
+      return false;
 
   }
 

@@ -22,7 +22,7 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = NovaVagaPage;
+  rootPage:any = DadosUsuarioPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 

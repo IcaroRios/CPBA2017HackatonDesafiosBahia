@@ -39,6 +39,19 @@ export class Candidato {
     public rendaFamiliar:string = "";
     public numeroMembros:string ="";
     public numeroMembrosTrabalhando : string = "";
+    public habilitado: string = "";
+    public tempoHabilitacao: string = "";
+    public veiculo: string= "";
+    public tipoVeiculo: string = "";
+    public disponivelViagem: string ="";
+    public disponivelMorarLocalTrabalho: string = "";
+    public disponivelAusentar: string ="";
+    public condicaoCandidato: string = "";
+    public programaGovernoParticipa: string = "";
+    public riscoDesemprego: string = "";
+    public economiaSolidaria: string = "";
+    public bolsaFamilia: string = "";
+    public gestorPoliticaPublica: string="";
 
     constructor() {
 
