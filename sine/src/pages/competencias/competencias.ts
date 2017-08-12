@@ -42,6 +42,9 @@ export class CompetenciasPage {
       if (!usuario.habilidades) {
         this.candidato.habilidades = [{ nome: '' }];
       }
+      if (!this.candidato.certificacoes) {
+        this.candidato.certificacoes.push({ nome: '' });
+      }
     });
   }
 

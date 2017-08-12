@@ -1,7 +1,8 @@
+import { NativeStorageProvider } from './../../providers/native-storage/native-storage';
+import { Candidato } from './../../model/candidato';
 import { Component } from '@angular/core';
 import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Vaga } from '../../model/vaga';
-import { NativeStorageProvider } from '../../providers/native-storage/native-storage';
 import { FirebaseProvider } from '../../providers/firebase/firebase';
 
 /**
@@ -17,6 +18,7 @@ import { FirebaseProvider } from '../../providers/firebase/firebase';
 })
 export class NovaVagaPage {
 
+  private candidato: Candidato = new Candidato();
   private vaga: Vaga = new Vaga();
 
   constructor(
@@ -27,13 +29,64 @@ export class NovaVagaPage {
     private fbService: FirebaseProvider
   ) {
     this.native.get("user").then(usuario => {
+      this.candidato = usuario;
       this.vaga.empresa = usuario.nome;
       this.vaga.empresaKey = usuario.key;
+      if (!usuario.cursoTecnico) {
+        this.candidato.cursoTecnico = [{ nome: '' }];
+      }
+      if (!usuario.cursoSuperior) {
+        this.candidato.cursoSuperior = [{ nome: '' }];
+      }
+      if (!usuario.posGraduacao) {
+        this.candidato.posGraduacao = [{ nome: '' }];
+      }
+      if (!usuario.idiomas) {
+        this.candidato.idiomas = [{ nome: '' }];
+      }
+      if (!usuario.habilidades) {
+        this.candidato.habilidades = [{ nome: '' }];
+      }
+      if (!this.candidato.certificacoes) {
+        this.candidato.certificacoes.push({ nome: '' });
+      }
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NovaVagaPage');
+  tecnico() {
+    if (this.candidato.cursoTecnico[this.candidato.cursoTecnico.length - 1].nome != "") {
+      this.candidato.cursoTecnico.push({ nome: '' });
+    }
+  }
+
+  graduacao() {
+    if (this.candidato.posGraduacao[this.candidato.posGraduacao.length - 1].nome != "") {
+      this.candidato.posGraduacao.push({ nome: '' });
+    }
+  }
+
+  superior() {
+    if (this.candidato.cursoSuperior[this.candidato.cursoSuperior.length - 1].nome != "") {
+      this.candidato.cursoSuperior.push({ nome: '' });
+    }
+  }
+
+  idiomasF() {
+    if (this.candidato.idiomas[this.candidato.idiomas.length - 1].nome != "") {
+      this.candidato.idiomas.push({ nome: '' });
+    }
+  }
+
+  habilidades() {
+    if (this.candidato.habilidades[this.candidato.habilidades.length - 1].nome != "") {
+      this.candidato.habilidades.push({ nome: '' });
+    }
+  }
+
+  certificacao() {
+    if (this.candidato.certificacoes[this.candidato.certificacoes.length - 1].nome != "") {
+      this.candidato.certificacoes.push({ nome: '' });
+    }
   }
 
   adicionarVaga() {

@@ -20,6 +20,8 @@ import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { HomePage } from '../pages/home/home';
 import { CandidatoAgendamentoPage } from './../pages/candidato-agendamento/candidato-agendamento';
 import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
+import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
+
 import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
 
 
@@ -27,7 +29,7 @@ import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = EmpresaHomePage;
+  rootPage: any = CompetenciasPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
