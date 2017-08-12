@@ -207,9 +207,9 @@
     <ion-input type="number" [(ngModel)]="candidato.arteiraTrabalhoPrevidencia"></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label color="azulbahia" floating>Cargo Almejado</ion-label>
-    <ion-input type="text" [(ngModel)]="candidato.cargoAtuacao"></ion-input>
+  <ion-item *ngFor="let cargo of candidato.ocupacao">
+    <ion-label color="azulbahia" floating>Ocupação</ion-label>
+    <ion-input type="text" [(ngModel)]="cargo.nome" (keyup)="ocupacao()"></ion-input>
   </ion-item>
 
   <hr>

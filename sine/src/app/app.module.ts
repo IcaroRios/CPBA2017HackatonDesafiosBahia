@@ -1,3 +1,4 @@
+import { FeedbackPage } from './../pages/feedback/feedback';
 import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
 import { VerVagaPage } from './../pages/ver-vaga/ver-vaga';
 import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
@@ -72,7 +73,8 @@ const firebaseConfig = {
     CandidatoAgendamentoPage,
     EmpresaBuscarPage,
     VerVagaPage,
-    PesosVagaPage
+    PesosVagaPage,
+    FeedbackPage
   ],
   imports: [
     HttpModule,
@@ -105,6 +107,7 @@ const firebaseConfig = {
     CandidatoAgendamentoPage,
     EmpresaBuscarPage,
     PesosVagaPage,
+    FeedbackPage,
     VerVagaPage
     
   ],

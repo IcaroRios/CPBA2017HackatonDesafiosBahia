@@ -52,6 +52,7 @@ export class HomeCandidatoPage {
             this.nativeStorage.set('user', userAtual);
             this.usuario = userAtual;
             this.getVagas();
+            
           }
         });
       });
@@ -65,7 +66,7 @@ export class HomeCandidatoPage {
         this.usuario.ocupacao.map(profissaoAtual => {
           if (vaga) {
             vaga.map(vagaAtual => {
-              // this.calcularPeso(this.usuario, vagaAtual);
+              this.calcularPeso(this.usuario, vagaAtual);
               if (vagaAtual.ocupacao == profissaoAtual.nome) {
                 if (this.empregos.indexOf(vagaAtual) < 0) {
                   this.empregos.push(vagaAtual);
@@ -73,6 +74,7 @@ export class HomeCandidatoPage {
               }
             });
           }
+          this.ordenar();
         });
       }
     });

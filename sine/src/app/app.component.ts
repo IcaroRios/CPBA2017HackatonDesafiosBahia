@@ -26,6 +26,7 @@ import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
 import { VerVagaPage } from './../pages/ver-vaga/ver-vaga';
 import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
 import { OneSignal } from '@ionic-native/onesignal';
+import { FeedbackPage } from './../pages/feedback/feedback';
 
 
 
