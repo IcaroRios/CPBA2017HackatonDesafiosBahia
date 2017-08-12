@@ -33,7 +33,11 @@ import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
   rootPage: any = VerVagaPage;
+=======
+  rootPage: any = EmpresaHomePage;
+>>>>>>> 8f197b75b14916e0ad4046f361226d41cadbe09b
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
@@ -50,12 +54,12 @@ export class MyApp {
     //     this.nav.setRoot(NovaVagaPage);
     //   }
     // }).catch(()=>this.nav.setRoot(NovaVagaPage));
-      platform.ready().then(() => {
-        // Okay, so the platform is ready and our plugins are available.
-        // Here you can do any higher level native things you might need.
-        statusBar.styleDefault();
-        splashScreen.hide();
-      });
+    platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
+      statusBar.styleDefault();
+      splashScreen.hide();
+    });
   }
 }
 
