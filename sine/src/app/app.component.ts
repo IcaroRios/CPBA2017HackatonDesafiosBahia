@@ -12,17 +12,20 @@ import { LoginPage } from './../pages/login/login';
 import { DadosUsuarioPage } from './../pages/dados-usuario/dados-usuario';
 import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-agendamento';
 import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
+import { NovaVagaPage } from './../pages/nova-vaga/nova-vaga';
 import { NativeStorageProvider } from './../providers/native-storage/native-storage';
 import { CompetenciasPage } from './../pages/competencias/competencias';
 import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
-
+import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { HomePage } from '../pages/home/home';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  @ViewChild(Nav) nav: Nav;
-  rootPage;
+  rootPage: any = ExperienciaPage;
+  //@ViewChild(Nav) nav: Nav;
+  //rootPage;
 
   constructor(
     platform: Platform,
@@ -30,13 +33,13 @@ export class MyApp {
     splashScreen: SplashScreen,
     private nativeStorage: NativeStorageProvider
   ) {
-    this.nativeStorage.get("user").then(response => {
-      if (response) {
-        this.nav.setRoot(EmpresaHomePage);
-      } else {
-        this.nav.setRoot(LoginPage);
-      }
-    }).catch(()=>this.nav.setRoot(LoginPage));
+    // this.nativeStorage.get("user").then(response => {
+    //   if (response) {
+    //     this.nav.setRoot(EmpresaHomePage);
+    //   } else {
+    //     this.nav.setRoot(NovaVagaPage);
+    //   }
+    // }).catch(()=>this.nav.setRoot(NovaVagaPage));
       platform.ready().then(() => {
         // Okay, so the platform is ready and our plugins are available.
         // Here you can do any higher level native things you might need.

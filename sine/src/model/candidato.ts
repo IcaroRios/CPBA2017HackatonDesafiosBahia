@@ -19,6 +19,7 @@ export class Candidato {
     public deficiencia:string="";
     public descricaoDeficiencia:string="";
     public logradouro:string="";
+    public complemento:string="";
     public numero:string="";
     public bairro:string="";
     public cep:string="";
@@ -27,13 +28,17 @@ export class Candidato {
     public zonaMoradia: string = "";
     public referencia: string = "";
     public emailProfissional: string = "";
-    public primeiroTelefone: string = "";
-    public contatoPrimeirotelefone: string = "";
-    public segundoTelefone: string = "";
-    public contatoSegundoTelefone: string = "";
-    public carteiraDeIdentidade: string = "";
+    public primeiroTelefone: string = "";    
+    public segundoTelefone: string = "";    
+    public carteiraIdentidade: string = "";
+    public orgaoEmissorIdentidade:string = "";
     public cpf: string = "";
     public carteiraTrabalhoPrevidencia: string = "";
+    public papelFamilia:string ="";
+    public rendaPropria:string = "";
+    public rendaFamiliar:string = "";
+    public numeroMembros:string ="";
+    public numeroMembrosTrabalhando : string = "";
 
     constructor() {
 
