@@ -21,7 +21,7 @@
   <p>Dados da vaga</p>
   <hr>
   <ion-item>
-    <ion-label color="azulbahia">Contratação</ion-label>
+    <ion-label color="azulbahia" floating>Contratação</ion-label>
     <ion-select [(ngModel)]="vaga.contratacao">
       <ion-option value="Estágio">Estágio</ion-option>
       <ion-option value="Menor Aprendiz">Menor Aprendiz</ion-option>
@@ -49,7 +49,7 @@
     <ion-input type="number" [(ngModel)]="vaga.mesesProfissional"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Escolaridade</ion-label>
+    <ion-label color="azulbahia" floating>Escolaridade</ion-label>
     <ion-select [(ngModel)]="vaga.escolaridade">
       <ion-option value="Pós-graduação completa">Pós-graduação completa</ion-option>
       <ion-option value="Pós-graduação incompleta">Pós-graduação incompleta</ion-option>
@@ -62,7 +62,7 @@
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Gênero</ion-label>
+    <ion-label color="azulbahia" floating>Gênero</ion-label>
     <ion-select [(ngModel)]="vaga.genero">
       <ion-option value="Masculino">Masculino</ion-option>
       <ion-option value="Feminino">Feminio</ion-option>
@@ -109,14 +109,14 @@
     <ion-input type="number" [(ngModel)]="vaga.final"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Aceita deficiente</ion-label>
+    <ion-label color="azulbahia" floating>Aceita deficiente</ion-label>
     <ion-select [(ngModel)]="vaga.deficiente">
       <ion-option value="Sim">Sim</ion-option>
       <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Tipo da deficiência</ion-label>
+    <ion-label color="azulbahia" floating>Tipo da deficiência</ion-label>
     <ion-select [(ngModel)]="vaga.tipoDeficiencia">
       <ion-option value="Física">Física</ion-option>
       <ion-option value="Auditiva">Auditiva</ion-option>
@@ -125,7 +125,7 @@
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Carteira de habilitação</ion-label>
+    <ion-label color="azulbahia" floating>Carteira de habilitação</ion-label>
     <ion-select [(ngModel)]="vaga.habilitacao">
       <ion-option value="Sim">Sim</ion-option>
       <ion-option value="Não">Não</ion-option>
@@ -141,21 +141,21 @@
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Disponibilidade de realizar viagem</ion-label>
+    <ion-label color="azulbahia" floating>Disponibilidade de realizar viagem</ion-label>
     <ion-select [(ngModel)]="vaga.viajar">
       <ion-option value="Sim">Sim</ion-option>
       <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Disponibilidade para dormir no local de trabalho</ion-label>
+    <ion-label color="azulbahia" floating>Disponibilidade para dormir no local de trabalho</ion-label>
     <ion-select [(ngModel)]="vaga.dormir">
       <ion-option value="Sim">Sim</ion-option>
       <ion-option value="Não">Não</ion-option>
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Disponibilidade para se ausentar do domicílio por longo período</ion-label>
+    <ion-label color="azulbahia" floating>Disponibilidade para se ausentar do domicílio por longo período</ion-label>
     <ion-select [(ngModel)]="vaga.ausentarDomicilio">
       <ion-option value="Sim">Sim</ion-option>
       <ion-option value="Não">Não</ion-option>
@@ -169,7 +169,7 @@
     <ion-input type="number" [(ngModel)]="vaga.salario"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Periodicidade do pagamento</ion-label>
+    <ion-label color="azulbahia" floating>Periodicidade do pagamento</ion-label>
     <ion-select [(ngModel)]="vaga.pagamento">
       <ion-option value="Hora">Hora</ion-option>
       <ion-option value="Dia">Dia</ion-option>
@@ -182,7 +182,7 @@
   <p>Local e horário de trabalho</p>
   <hr>
   <ion-item>
-    <ion-label color="azulbahia">Horário de trabalho</ion-label>
+    <ion-label color="azulbahia" floating>Horário de trabalho</ion-label>
     <ion-select [(ngModel)]="vaga.turno">
       <ion-option value="Manhã">Manhã</ion-option>
       <ion-option value="Tarde">Tarde</ion-option>
@@ -191,7 +191,7 @@
     </ion-select>
   </ion-item>
   <ion-item>
-    <ion-label color="azulbahia">Local de trabalho</ion-label>
+    <ion-label color="azulbahia" floating>Local de trabalho</ion-label>
     <ion-select [(ngModel)]="vaga.local">
       <ion-option value="Mesmo local da empresa">Mesmo local da empresa</ion-option>
       <ion-option value="Outro">Outro</ion-option>
