@@ -1,7 +1,8 @@
 import { NativeStorageProvider } from './../../providers/native-storage/native-storage';
 import { Candidato } from './../../model/candidato';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
+import { FirebaseProvider } from './../../providers/firebase/firebase';
 
 /**
  * Generated class for the CertificacoesPage page.
@@ -18,9 +19,16 @@ export class CertificacoesPage {
 
   private candidato: Candidato = new Candidato();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private native: NativeStorageProvider) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private native: NativeStorageProvider,
+    private fbService: FirebaseProvider,
+    private toastCtrl: ToastController
+  ) {
     this.native.get("user").then(usuario => {
       this.candidato = usuario;
+      console.log(this.candidato);
       if (!usuario.cursoTecnico) {
         this.candidato.cursoTecnico = [{ nome: '' }];
       }
@@ -37,14 +45,32 @@ export class CertificacoesPage {
         this.candidato.habilidades = [{ nome: '' }];
       }
       if (!this.candidato.certificacoes) {
-        this.candidato.certificacoes.push({ nome: '' });
+        this.candidato.certificacoes = [{ nome: '' }];
       }
     });
   }
 
-  certificacoes() {
+  certificacao() {
     if (this.candidato.certificacoes[this.candidato.certificacoes.length - 1].nome != "") {
       this.candidato.certificacoes.push({ nome: '' });
+    }
+  }
+
+  mensagem(message) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    });
+    toast.present();
+  }
+
+  cadastrar() {
+    if (this.candidato.certificacoes) {
+      console.log(this.candidato);
+      this.fbService.updateCandidato(this.candidato.key, this.candidato).then(() => {
+        this.mensagem("Adicionado com sucesso");
+        this.native.set("user", this.candidato);
+      });
     }
   }
 

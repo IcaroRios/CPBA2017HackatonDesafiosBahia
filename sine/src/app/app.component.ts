@@ -30,11 +30,7 @@ import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
-  rootPage: any = ExperienciaPage;
-=======
-  rootPage: any = CompetenciasPage;
->>>>>>> 31592aaaff3a679ea4480723c84a9a1c497904ee
+  rootPage: any = LoginPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
