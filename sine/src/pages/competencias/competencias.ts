@@ -19,13 +19,30 @@ export class CompetenciasPage {
   private candidato: Candidato = new Candidato();
 
   constructor(
-    public navCtrl: NavController, 
+    public navCtrl: NavController,
     public navParams: NavParams,
     private fbService: FirebaseProvider,
     private native: NativeStorageProvider,
     private toastCtrl: ToastController,
-
   ) {
+    this.native.get("user").then(usuario => {
+      this.candidato = usuario;
+      if (!usuario.cursoTecnico) {
+        this.candidato.cursoTecnico = [{ nome: '' }];
+      }
+      if (!usuario.cursoSuperior) {
+        this.candidato.cursoSuperior = [{ nome: '' }];
+      }
+      if (!usuario.posGraduacao) {
+        this.candidato.posGraduacao = [{ nome: '' }];
+      }
+      if (!usuario.idiomas) {
+        this.candidato.idiomas = [{ nome: '' }];
+      }
+      if (!usuario.habilidades) {
+        this.candidato.habilidades = [{ nome: '' }];
+      }
+    });
   }
 
   ionViewDidLoad() {
@@ -70,7 +87,7 @@ export class CompetenciasPage {
     });
   }
 
-   mensagem(message) {
+  mensagem(message) {
     let toast = this.toastCtrl.create({
       message: message,
       duration: 3000

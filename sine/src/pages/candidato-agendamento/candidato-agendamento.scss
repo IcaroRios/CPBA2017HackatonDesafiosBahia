@@ -1,0 +1,21 @@
+page-candidato-agendamento {
+    ion-content{
+        background-color: #EAFFFF !important;
+    }
+    ion-title{
+        text-align: center !important;
+    }
+    .vagas{
+        background-color: white;
+        margin: 0 10px;
+    }
+    ion-item{
+        h2{
+            color:#0064AA;
+        }
+        h4{
+            color: #95989A;
+        }
+        padding-top: 15px !important;
+    }
+}
