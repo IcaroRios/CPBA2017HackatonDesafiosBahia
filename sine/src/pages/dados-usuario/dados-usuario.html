@@ -235,7 +235,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Habilitado</ion-label>
-    <ion-select>
+    <ion-select  [(ngModel)]="candidato.habilitado">
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -243,12 +243,12 @@
 
   <ion-item>
     <ion-label color="azulbahia" floating>Tempo de Habilitação</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number"  [(ngModel)]="candidato.tempoHabilitacao" ></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Veículo para Trabalho</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.veiculo" >
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -256,7 +256,7 @@
 
   <ion-item>
     <ion-label color="azulbahia" floating>Tipo de veículo</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.tipoVeiculo" >
       <ion-option value="carro">Carro</ion-option>
       <ion-option value="moto">Moto</ion-option>
       <ion-option value="caminhao">Caminhão</ion-option>
@@ -266,7 +266,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Disponível para viagem</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.disponivelViagem">
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -274,7 +274,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Disponível para morar no local de trabalho</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.disponivelMorarLocalTrabalho">
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -282,7 +282,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Disponível para ausentar por longo período</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.disponivelAusentar">
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -290,12 +290,12 @@
 
   <ion-item>
     <ion-label color="azulbahia" floating>Condição do Candidato</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="candidato.condicaoCandidato" ></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="azulbahia">Programa do governo que participa</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.programaGovernoParticipa" >
       <ion-option value="s">Nenhum</ion-option>
       <ion-option value="n">PROgER</ion-option>
       <ion-option value="n">PRONAF</ion-option>
@@ -306,7 +306,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Risco de Desemprego</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.riscoDesemprego" >
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -314,7 +314,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Beneficiário prog. Economia Solidária</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.economiaSolidaria" >
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -322,7 +322,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Beneficiário prog. Bolsa Família</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.bolsaFamilia">
       <ion-option value="s">Sim</ion-option>
       <ion-option value="n">Não</ion-option>
     </ion-select>
@@ -330,7 +330,7 @@
 
   <ion-item>
     <ion-label color="azulbahia">Gestor de política pública</ion-label>
-    <ion-select>
+    <ion-select [(ngModel)]="candidato.gestorPoliticaPublica">
       <ion-option value="s">Nenhum</ion-option>
       <ion-option value="n">Comissão/Conselho de Trabalho</ion-option>
       <ion-option value="n">Fórum de políticas publicas de emprego</ion-option>
@@ -340,7 +340,7 @@
   <ion-grid class="margintop30">
     <ion-row>
       <ion-col col-4 offset-8>
-        <button color="azulbahia" ion-button blockgit>Salvar</button>
+        <button color="azulbahia" ion-button (click)="salvarInformacoes()" blockgit>Salvar</button>
       </ion-col>
     </ion-row>
   </ion-grid>
