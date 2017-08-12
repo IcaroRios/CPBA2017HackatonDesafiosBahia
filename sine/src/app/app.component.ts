@@ -18,22 +18,16 @@ import { CompetenciasPage } from './../pages/competencias/competencias';
 import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
 import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { HomePage } from '../pages/home/home';
-<<<<<<< HEAD
 import { CandidatoAgendamentoPage } from './../pages/candidato-agendamento/candidato-agendamento';
-=======
 import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
->>>>>>> 28c2b40d3cb06c7e30d42b198d784ee087b7c17a
+import { EmpresaBuscarPage } from './../pages/empresa-buscar/empresa-buscar';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-<<<<<<< HEAD
-  rootPage: any = CandidatoAgendamentoPage;
-=======
-  rootPage: any = ProcurarVagaPage;
->>>>>>> 28c2b40d3cb06c7e30d42b198d784ee087b7c17a
+  rootPage: any = EmpresaBuscarPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
