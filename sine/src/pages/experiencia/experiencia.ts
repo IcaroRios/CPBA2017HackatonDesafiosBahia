@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { Candidato } from './../../model/candidato';
 import { NativeStorageProvider } from './../../providers/native-storage/native-storage';
 import { FirebaseProvider } from './../../providers/firebase/firebase';
@@ -10,7 +10,6 @@ import { FirebaseProvider } from './../../providers/firebase/firebase';
  * on Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-experiencia',
   templateUrl: 'experiencia.html',
@@ -28,16 +27,13 @@ export class ExperienciaPage {
   ) {
     this.native.get("user").then(usuario => {
       this.candidato = usuario;
-      console.log(this.candidato);
-      if (!usuario.experiencia) {
+      if (!this.candidato.experiencias) {
         this.candidato.experiencias = [{ cargo: '', fontedenIformacao: '', menorAprendiz:'' }];
       }
+      this.experienciasF();
     });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ExperienciaPage');
-  }
 
   mensagem(message) {
     let toast = this.toastCtrl.create({
@@ -47,9 +43,14 @@ export class ExperienciaPage {
     toast.present();
   }
 
+  experienciasF() {
+    if (this.candidato.experiencias[this.candidato.experiencias.length - 1].cargo != "") {
+      this.candidato.experiencias.push({ cargo: '', fontedenIformacao: '', menorAprendiz:'' });
+    }
+  }
+
   cadastrar() {
     if (this.candidato.experiencias) {
-      console.log(this.candidato.experiencias);
       this.fbService.updateCandidato(this.candidato.key, this.candidato).then(() => {
         this.mensagem("Adicionado com sucesso");
         this.native.set("user", this.candidato);
