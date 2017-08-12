@@ -28,11 +28,12 @@ import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
 
 
 
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = PesosVagaPage;
+  rootPage: any = ExperienciaPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
