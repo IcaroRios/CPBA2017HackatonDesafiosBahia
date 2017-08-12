@@ -31,18 +31,17 @@ export class LoginPage {
     private nativeStorage: NativeStorageProvider
 
   ) {
-    this.nativeStorage.get("user").then(userAtual=>{
+    this.nativeStorage.get("user").then(userAtual => {
       this.fbService.getCandidatos().subscribe(usuario => {
         usuario.map(usuarioAtual => {
-          if (usuarioAtual.$key == userAtual.key){
+          if (usuarioAtual.$key == userAtual.key) {
             userAtual = usuarioAtual;
             userAtual.key = usuarioAtual.$key;
             this.nativeStorage.set('user', userAtual);
           }
-
         });
       });
-    }
+    });
   }
 
   logar() {
