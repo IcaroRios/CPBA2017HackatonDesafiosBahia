@@ -23,6 +23,14 @@ export class Candidato {
     public numero:string="";
     public bairro:string="";
     public cep:string="";
+    public escolaridade:string="";
+    public estudante:string="";
+    public cursoTecnico = [{nome:''}];
+    public cursoSuperior = [{nome:''}];
+    public posGraduacao = [{nome:''}];
+    public idiomas = [{nome:''}];
+    public habilidades = [{nome:''}];
+    public certificacoes = [{ nome: '' }];
     public municipio:string="";
     public ufMoradia:string="";
     public zonaMoradia: string = "";

@@ -18,6 +18,7 @@ import { CompetenciasPage } from './../pages/competencias/competencias';
 import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
 import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { HomePage } from '../pages/home/home';
+import { CandidatoAgendamentoPage } from './../pages/candidato-agendamento/candidato-agendamento';
 import { ProcurarVagaPage } from './../pages/procurar-vaga/procurar-vaga';
 import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
 
@@ -27,7 +28,7 @@ import { PreCadastroPage } from './../pages/pre-cadastro/pre-cadastro';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = DadosUsuarioPage;
+  rootPage: any = CompetenciasPage;
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
