@@ -14,13 +14,14 @@ import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-a
 import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
 import { CompetenciasPage } from './../pages/competencias/competencias';
 import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
-
+import { ExperienciaPage } from './../pages/experiencia/experiencia';
 import { HomePage } from '../pages/home/home';
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = CertificacoesPage;
+  rootPage: any = ExperienciaPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -1,5 +1,6 @@
 
 
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -28,6 +29,7 @@ import { EmpresaAgendamentoPage } from './../pages/empresa-agendamento/empresa-a
 import { EmpresaPedidosPage } from './../pages/empresa-pedidos/empresa-pedidos';
 import { CertificacoesPage } from './../pages/certificacoes/certificacoes';
 import { CompetenciasPage } from './../pages/competencias/competencias';
+import { ExperienciaPage } from './../pages/experiencia/experiencia';
 
 
 const firebaseConfig = {
@@ -54,7 +56,8 @@ const firebaseConfig = {
     EmpresaAgendamentoPage,
     EmpresaPedidosPage,
     CompetenciasPage,
-    CertificacoesPage
+    CertificacoesPage,
+    ExperienciaPage
   ],
   imports: [
     HttpModule,
@@ -79,7 +82,8 @@ const firebaseConfig = {
     EmpresaAgendamentoPage,
     EmpresaPedidosPage,
     CompetenciasPage,
-    CertificacoesPage
+    CertificacoesPage,
+    ExperienciaPage
   ],
   providers: [
     StatusBar,
