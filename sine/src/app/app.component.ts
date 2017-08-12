@@ -33,7 +33,11 @@ import { PesosVagaPage } from './../pages/pesos-vaga/pesos-vaga';
   templateUrl: 'app.html'
 })
 export class MyApp {
+<<<<<<< HEAD
+  rootPage: any = VerVagaPage;
+=======
   rootPage: any = EmpresaHomePage;
+>>>>>>> 8f197b75b14916e0ad4046f361226d41cadbe09b
   //@ViewChild(Nav) nav: Nav;
   //rootPage;
 
