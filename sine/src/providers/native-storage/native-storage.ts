@@ -16,6 +16,7 @@ export class NativeStorageProvider {
   }
 
   set(chave, valor): Promise<any> {
+    console.log(valor);
     return this.nativeStorage.set(chave, valor)
       .then(
       () => true,
@@ -29,6 +30,10 @@ export class NativeStorageProvider {
       data => data,
       error => undefined
       );
+  }
+
+  logout(chave){
+    this.nativeStorage.remove(chave);
   }
 
 }

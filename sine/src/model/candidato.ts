@@ -2,6 +2,8 @@ export class Candidato {
     public nome: string = "";
     public email: string = "";
     public senha: string = "";
+    private $key;
+    private key;
     public numeroIdentificacao: string = "";
     public nomeMae: string = "";
     public apelido: string = "";
