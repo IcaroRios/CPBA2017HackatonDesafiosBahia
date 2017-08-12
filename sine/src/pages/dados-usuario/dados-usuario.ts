@@ -33,7 +33,7 @@ export class DadosUsuarioPage {
     this.native.get('user').then(usuario => {
       this.candidato = usuario;
       
-      if (!this.candidato.ocupacao){
+      if (!usuario.ocupacao){
         this.candidato.ocupacao = [{ nome: '' }];
       }
       console.log(this.candidato);
